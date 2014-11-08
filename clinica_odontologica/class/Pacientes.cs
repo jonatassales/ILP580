@@ -24,7 +24,7 @@ namespace clinica_odontologica
         }
 
         public void updatePacientes(int id) { 
-        
+            
         }
 
         public void deletePacientes(int id)
