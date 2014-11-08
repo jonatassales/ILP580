@@ -12,7 +12,6 @@ namespace clinica_odontologica
 {
     public partial class Home : Form
     {
-        Config conf = new Config();
 
         public Home()
         {
@@ -21,6 +20,8 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
+
+
             //DataTable data;
             //data = conf.find("SELECT * FROM teste");
             //MessageBox.Show(data.Rows[0].ItemArray[0].ToString());
