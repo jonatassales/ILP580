@@ -61,6 +61,29 @@ namespace clinica_odontologica
             return data;
         }
 
+        public int findCount(string strQuery)
+        {
+            connection = new MySqlConnection(path);
+            MySqlCommand query = connection.CreateCommand();
+            query.CommandText = strQuery;
+
+            DataTable data = new DataTable();
+            try
+            {
+                connection.Open();
+                MySqlDataReader reader = query.ExecuteReader();
+                data.Load(reader);
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message, "ERRO");
+            }
+
+            int numRows = int.Parse(data.Rows[0].ItemArray[0].ToString());
+            return numRows;
+        }
+
         public void update(string strQuery)
         {
             connection = new MySqlConnection(path);

@@ -41,5 +41,20 @@ namespace clinica_odontologica
         {
             return this.find("SELECT * FROM usuarios WHERE id = " + id);
         }
+
+        public bool checkLogin(string username, string password)
+        {
+            int rs;
+            rs = this.findCount("SELECT count(id) FROM usuarios WHERE username = '" + username + "' AND password = '" + password+"'");
+
+            if (rs > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

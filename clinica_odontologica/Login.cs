@@ -32,5 +32,38 @@ namespace clinica_odontologica
         {
             Application.Exit();
         }
+
+        private void login() {
+            string username, password;
+            username = tb_login.Text;
+            password = tb_senha.Text;
+
+            if (username != "" && password != "")
+            {
+                Usuarios objUsuarios = new Usuarios();
+                bool result = objUsuarios.checkLogin(username, password);
+
+                if (result)
+                {
+                    lbl_login_result.ForeColor = Color.Green;
+                    lbl_login_result.Text = "Logou";
+                }
+                else 
+                {
+                    lbl_login_result.ForeColor = Color.Red;
+                    lbl_login_result.Text = "Login e(ou) senha incorreo(s).";
+                }
+            }
+            else
+            {
+                lbl_login_result.ForeColor = Color.Red;
+                lbl_login_result.Text = "Você deve preencher todos os campos para logar.";
+            }
+        }
+
+        private void bt_logar_Click(object sender, EventArgs e)
+        {
+            this.login();
+        }
     }
 }

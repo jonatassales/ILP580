@@ -20,9 +20,6 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            Pacientes objPaciente = new Pacientes();
-
-            objPaciente.deletePacientes(12);
 
             //DataTable data;
             //data = conf.find("SELECT * FROM teste");
