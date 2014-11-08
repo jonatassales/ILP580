@@ -27,6 +27,11 @@ namespace clinica_odontologica
         
         }
 
+        public void deletePacientes(int id)
+        {
+            this.delete("DELETE FROM clientes WHERE id = "+id);
+        }
+
         public DataTable getPacietes() {
             return this.find("SELECT * FROM clientes");
         }

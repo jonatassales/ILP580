@@ -22,7 +22,7 @@ namespace clinica_odontologica
         {
             Pacientes objPaciente = new Pacientes();
 
-            objPaciente.setPacientes("nome", "nascimento", "cpf", 1, 1, "bairro", "endereco", 1, "cep", "telefone", "email", "imagem");
+            objPaciente.deletePacientes(12);
 
             //DataTable data;
             //data = conf.find("SELECT * FROM teste");
