@@ -20,7 +20,9 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
+            Pacientes objPaciente = new Pacientes();
 
+            objPaciente.setPacientes("nome", "nascimento", "cpf", 1, 1, "bairro", "endereco", 1, "cep", "telefone", "email", "imagem");
 
             //DataTable data;
             //data = conf.find("SELECT * FROM teste");

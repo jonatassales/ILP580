@@ -1,6 +1,6 @@
 ﻿/*
  * MySQL CRUD created by Jonatas
- * copyright 2014
+ * Fork me on GitHub github.com/jonatassales
  */
 
 using System;
@@ -80,8 +80,21 @@ namespace clinica_odontologica
         }
 
         public void delete(string strQuery)
-        { 
-        
+        {
+            connection = new MySqlConnection(path);
+            MySqlCommand query = connection.CreateCommand();
+            query.CommandText = strQuery;
+
+            try
+            {
+                connection.Open();
+                query.ExecuteNonQuery();
+                connection.Close();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Erro: " + e.Message, "ERRO");
+            }
         }
     }
 }
