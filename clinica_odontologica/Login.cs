@@ -16,5 +16,21 @@ namespace clinica_odontologica
         {
             InitializeComponent();
         }
+
+        private void tb_login_Click(object sender, EventArgs e)
+        {
+            tb_login.Text = "";
+        }
+
+        private void tb_senha_Click(object sender, EventArgs e)
+        {
+            tb_senha.Text = "";
+            tb_senha.PasswordChar = '*';
+        }
+
+        private void lbl_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

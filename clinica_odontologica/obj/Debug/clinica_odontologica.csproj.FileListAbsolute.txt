@@ -8,3 +8,13 @@ C:\Users\Jonatas Vinicius\Desktop\Jonatas\Materias\Programação 8\clinica_odont
 C:\Users\Jonatas Vinicius\Desktop\Jonatas\Materias\Programação 8\clinica_odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.pdb
 C:\Users\Jonatas Vinicius\Desktop\Jonatas\Materias\Programação 8\clinica_odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.Home.resources
 C:\Users\Jonatas Vinicius\Desktop\Jonatas\Materias\Programação 8\clinica_odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.Login.resources
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\bin\Debug\clinica_odontologica.exe.config
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.exe
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.pdb
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\bin\Debug\clinica_odontologica.exe
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\bin\Debug\clinica_odontologica.pdb
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.csprojResolveAssemblyReference.cache
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.Home.resources
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.Login.resources
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.Properties.Resources.resources
+C:\wamp\www\Fatec\clinica-odontologica\clinica_odontologica\obj\Debug\clinica_odontologica.csproj.GenerateResource.Cache
