@@ -46,7 +46,7 @@ namespace clinica_odontologica
                 if (result)
                 {
                     lbl_login_result.ForeColor = Color.Green;
-                    lbl_login_result.Text = "Logou";
+                    lbl_login_result.Text = "Logado com sucesso!";
                 }
                 else 
                 {
@@ -57,11 +57,11 @@ namespace clinica_odontologica
             else
             {
                 lbl_login_result.ForeColor = Color.Red;
-                lbl_login_result.Text = "Você deve preencher todos os campos para logar.";
+                lbl_login_result.Text = "Você deve preencher todos os campos.";
             }
         }
 
-        private void bt_logar_Click(object sender, EventArgs e)
+        private void lbl_logar_Click(object sender, EventArgs e)
         {
             this.login();
         }

@@ -20,11 +20,21 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-
             //DataTable data;
             //data = conf.find("SELECT * FROM teste");
             //MessageBox.Show(data.Rows[0].ItemArray[0].ToString());
            // conf.save("INSERT INTO teste (nome) VALUES('EDUARDO')");
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormUsuario form = new FormUsuario();
+            form.Show();
         }
     }
 }

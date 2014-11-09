@@ -86,38 +86,12 @@ namespace clinica_odontologica
 
         public void update(string strQuery)
         {
-            connection = new MySqlConnection(path);
-            MySqlCommand query = connection.CreateCommand();
-            query.CommandText = strQuery;
-
-            try
-            {
-                connection.Open();
-                query.ExecuteNonQuery();
-                connection.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro: " + e.Message, "ERRO");
-            }
+            this.save(strQuery);
         }
 
         public void delete(string strQuery)
         {
-            connection = new MySqlConnection(path);
-            MySqlCommand query = connection.CreateCommand();
-            query.CommandText = strQuery;
-
-            try
-            {
-                connection.Open();
-                query.ExecuteNonQuery();
-                connection.Close();
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Erro: " + e.Message, "ERRO");
-            }
+            this.save(strQuery);
         }
     }
 }

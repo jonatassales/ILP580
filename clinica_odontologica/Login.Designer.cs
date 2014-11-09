@@ -34,7 +34,7 @@
             this.tb_senha = new System.Windows.Forms.TextBox();
             this.lbl_exit = new System.Windows.Forms.Label();
             this.lbl_login_result = new System.Windows.Forms.Label();
-            this.bt_logar = new System.Windows.Forms.Button();
+            this.lbl_logar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,20 +98,23 @@
             this.lbl_login_result.AutoSize = true;
             this.lbl_login_result.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login_result.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_login_result.Location = new System.Drawing.Point(77, 297);
+            this.lbl_login_result.Location = new System.Drawing.Point(77, 327);
             this.lbl_login_result.Name = "lbl_login_result";
             this.lbl_login_result.Size = new System.Drawing.Size(0, 16);
             this.lbl_login_result.TabIndex = 5;
             // 
-            // bt_logar
+            // lbl_logar
             // 
-            this.bt_logar.Location = new System.Drawing.Point(306, 300);
-            this.bt_logar.Name = "bt_logar";
-            this.bt_logar.Size = new System.Drawing.Size(75, 23);
-            this.bt_logar.TabIndex = 6;
-            this.bt_logar.Text = "login";
-            this.bt_logar.UseVisualStyleBackColor = true;
-            this.bt_logar.Click += new System.EventHandler(this.bt_logar_Click);
+            this.lbl_logar.AutoSize = true;
+            this.lbl_logar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_logar.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_logar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lbl_logar.Location = new System.Drawing.Point(311, 297);
+            this.lbl_logar.Name = "lbl_logar";
+            this.lbl_logar.Size = new System.Drawing.Size(70, 24);
+            this.lbl_logar.TabIndex = 6;
+            this.lbl_logar.Text = "Logar";
+            this.lbl_logar.Click += new System.EventHandler(this.lbl_logar_Click);
             // 
             // Login
             // 
@@ -119,7 +122,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(470, 352);
-            this.Controls.Add(this.bt_logar);
+            this.Controls.Add(this.lbl_logar);
             this.Controls.Add(this.lbl_login_result);
             this.Controls.Add(this.lbl_exit);
             this.Controls.Add(this.tb_senha);
@@ -141,6 +144,6 @@
         private System.Windows.Forms.TextBox tb_login;
         private System.Windows.Forms.Label lbl_exit;
         private System.Windows.Forms.Label lbl_login_result;
-        private System.Windows.Forms.Button bt_logar;
+        private System.Windows.Forms.Label lbl_logar;
     }
 }

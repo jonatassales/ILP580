@@ -55,6 +55,8 @@
             this.caixaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraçõesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menu.SuspendLayout();
@@ -192,6 +194,7 @@
             this.pacientesToolStripMenuItem1,
             this.prontuariosToolStripMenuItem,
             this.financeiroToolStripMenuItem,
+            this.configuraçõesToolStripMenuItem,
             this.sobreToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.menu.Location = new System.Drawing.Point(0, 0);
@@ -286,6 +289,22 @@
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // configuraçõesToolStripMenuItem
+            // 
+            this.configuraçõesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem});
+            this.configuraçõesToolStripMenuItem.Name = "configuraçõesToolStripMenuItem";
+            this.configuraçõesToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.configuraçõesToolStripMenuItem.Text = "Configurações";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -298,10 +317,10 @@
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MainMenuStrip = this.menu;
             this.Name = "Home";
-            this.Text = "Odontovidas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormHome_Load);
             this.gb_home.ResumeLayout(false);
             this.gb_home.PerformLayout();
@@ -341,6 +360,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_est_pacientes;
+        private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
     }
 }
 
