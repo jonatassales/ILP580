@@ -47,6 +47,9 @@ namespace clinica_odontologica
                 {
                     lbl_login_result.ForeColor = Color.Green;
                     lbl_login_result.Text = "Logado com sucesso!";
+                    Program.home.Visible = true;
+                    Program.home.Enabled = true;
+                    this.Close();
                 }
                 else 
                 {
