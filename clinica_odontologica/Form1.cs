@@ -20,11 +20,9 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            Login formLogin = new Login();
-            formLogin.ShowDialog();
+            //Login formLogin = new Login();
+            //formLogin.ShowDialog();
 
-            Program.home.Visible = false;
-            Program.home.Enabled = false;
             //DataTable data;
             //data = conf.find("SELECT * FROM teste");
             //MessageBox.Show(data.Rows[0].ItemArray[0].ToString());

@@ -6,19 +6,24 @@ using System.Windows.Forms;
 
 namespace clinica_odontologica
 {
-    public static class Program
+    static class Program
     {
-        public static Home home;
+        public static bool logou = false;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
         public static void Main()
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            home = new Home();
-            Application.Run(home);
+            if (logou) {
+                Application.Run(new Home());
+            } else {
+                Application.Run(new Login());
+            }
+            
         }
     }
 }
