@@ -12,6 +12,9 @@ namespace clinica_odontologica
 {
     public partial class Login : Form
     {
+        public string campos;
+        public string filtro;
+
         public Login()
         {
             InitializeComponent();
@@ -47,7 +50,13 @@ namespace clinica_odontologica
                 {
                     lbl_login_result.ForeColor = Color.Green;
                     lbl_login_result.Text = "Logado com sucesso!";
-                    Program.logou = true;
+
+                    //PEGANDO DADOS DO USUARIO
+                    this.campos = "id, nome";
+                    this.filtro = "WHERE username = '"+username+"' AND password = '"+password+"'";
+                    DataTable rs = objUsuarios.getUsuarios(campos, filtro);
+                    Program.usuario = rs.Rows[0].ItemArray[1].ToString();
+                    Program.usuario_id = rs.Rows[0].ItemArray[0].ToString();
                     this.Close();
                 }
                 else 

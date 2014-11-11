@@ -12,7 +12,7 @@ namespace clinica_odontologica
 {
     public partial class Home : Form
     {
-
+        public int usuario_id;
         public Home()
         {
             InitializeComponent();
@@ -20,13 +20,9 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
-            //Login formLogin = new Login();
-            //formLogin.ShowDialog();
-
-            //DataTable data;
-            //data = conf.find("SELECT * FROM teste");
-            //MessageBox.Show(data.Rows[0].ItemArray[0].ToString());
-           // conf.save("INSERT INTO teste (nome) VALUES('EDUARDO')");
+            Login formLogin = new Login();
+            formLogin.ShowDialog();
+            lbl_bem_vindo.Text = "Bem-vindo Dr. " + Program.usuario;
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

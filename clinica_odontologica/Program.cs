@@ -8,7 +8,8 @@ namespace clinica_odontologica
 {
     static class Program
     {
-        public static bool logou = false;
+        public static string usuario;
+        public static string usuario_id;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -18,11 +19,8 @@ namespace clinica_odontologica
             
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (logou) {
-                Application.Run(new Home());
-            } else {
-                Application.Run(new Login());
-            }
+            Application.Run(new Home());
+            
             
         }
     }
