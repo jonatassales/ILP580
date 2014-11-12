@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_usuario_nome = new System.Windows.Forms.TextBox();
             this.bt_usuario_cadastrar = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dp_paciente_nascimento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // tb_usuario_email
@@ -79,19 +79,20 @@
             this.bt_usuario_cadastrar.Text = "Cadastrar";
             this.bt_usuario_cadastrar.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // dp_paciente_nascimento
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(135, 125);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 14;
+            this.dp_paciente_nascimento.Location = new System.Drawing.Point(135, 125);
+            this.dp_paciente_nascimento.Name = "dp_paciente_nascimento";
+            this.dp_paciente_nascimento.Size = new System.Drawing.Size(200, 20);
+            this.dp_paciente_nascimento.TabIndex = 14;
+            this.dp_paciente_nascimento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // FormPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 261);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dp_paciente_nascimento);
             this.Controls.Add(this.tb_usuario_email);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -110,6 +111,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tb_usuario_nome;
         private System.Windows.Forms.Button bt_usuario_cadastrar;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dp_paciente_nascimento;
     }
 }

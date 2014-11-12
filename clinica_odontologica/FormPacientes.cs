@@ -16,5 +16,10 @@ namespace clinica_odontologica
         {
             InitializeComponent();
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            MessageBox.Show(dp_paciente_nascimento.Value.GetHashCode()+"");
+        }
     }
 }

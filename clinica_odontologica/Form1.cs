@@ -35,5 +35,11 @@ namespace clinica_odontologica
             FormUsuario form = new FormUsuario();
             form.Show();
         }
+
+        private void pacientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FormPacientes form = new FormPacientes();
+            form.Show();
+        }
     }
 }
