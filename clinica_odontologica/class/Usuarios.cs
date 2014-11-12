@@ -22,9 +22,21 @@ namespace clinica_odontologica
             this.save(query);
         }
 
-        public void updateUsuarios(int id)
+        public void updateUsuarios(string filtro, string[] chave, string[] valor)
         {
-
+            string set_campos = "";
+            for(int i = 0; i < chave.Length; i++)
+            {
+                if(i == 0)
+                {
+                    set_campos = ""+chave[i]+" = '"+valor[i]+"'";
+                }
+                else
+                {
+                    set_campos += ","+chave[i]+" = '"+valor[i]+"'";
+                }
+            }
+            this.update("UPDATE usuarios SET " + set_campos+" "+filtro);
         }
 
         public void deleteUsuarios(int id)

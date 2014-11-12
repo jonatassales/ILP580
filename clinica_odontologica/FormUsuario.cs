@@ -20,6 +20,7 @@ namespace clinica_odontologica
         private void bt_usuario_cadastrar_Click(object sender, EventArgs e)
         {
             Usuarios objUsuario = new Usuarios();
+
             objUsuario.setUsuarios(tb_usuario_nome.Text,tb_usuario_email.Text,2,tb_usuario_username.Text,tb_usuario_password.Text);
         }
     }
