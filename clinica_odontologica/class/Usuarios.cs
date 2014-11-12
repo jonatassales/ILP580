@@ -18,7 +18,7 @@ namespace clinica_odontologica
             query = "INSERT INTO usuarios";
             query += "(nome, email, tipo, username, password)";
             query += "VALUES";
-            query += "('" + nome + "', '" + email + "', " + tipo + ", '" + username + "', '" + password + "')";
+            query += "('" + nome + "', '" + email + "', " + tipo + ", '" + username + "', '" + password.GetHashCode().ToString() + "')";
             this.save(query);
         }
 
