@@ -36,13 +36,49 @@ namespace clinica_odontologica
 
             //PACIENTES
             int numPacientes = objPacientes.getQuantPacientes();
-            lbl_est_pacientes.Text = numPacientes + " Pacientes cadastrados até o momento.";
+
+            if (numPacientes > 0)
+            {
+                lbl_est_pacientes.Text = numPacientes + " Pacientes cadastrados até o momento.";
+            }
+            else
+            {
+                lbl_est_pacientes.Text = "Nenhum Paciente cadastrado até o momento.";
+            }
+            
 
             //PRONTUARIOS
+            int numProntuarios = 0;
+            if (numProntuarios > 0)
+            {
+                lbl_est_prontuarios.Text = numProntuarios + " Prontuarios cadastrados até o momento.";
+            }
+            else
+            {
+                lbl_est_prontuarios.Text = "Nenhum prontuario cadastrado até o momento.";
+            }
 
             //TRATAMENTOS
+            int numTratamentos = 0;
+            if (numTratamentos > 0)
+            {
+                lbl_est_tratamentos.Text = numTratamentos + " Tratamentos cadastrados até o momento.";
+            }
+            else
+            {
+                lbl_est_tratamentos.Text = "Nenhum tratamento cadastrado até o momento.";
+            }
 
             //PARCELAS
+            int numParcelas = 0;
+            if (numProntuarios > 0)
+            {
+                lbl_est_parcelas.Text = numParcelas + " Parcelas cadastrados até o momento.";
+            }
+            else
+            {
+                lbl_est_parcelas.Text = "Nenhuma parcela em atraso.";
+            }
 
         }
 
@@ -60,6 +96,12 @@ namespace clinica_odontologica
         private void pacientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FormPacientes form = new FormPacientes();
+            form.Show();
+        }
+
+        private void bt_grid_pacientes_Click(object sender, EventArgs e)
+        {
+            FormUsuario form = new FormUsuario();
             form.Show();
         }
     }

@@ -35,9 +35,9 @@
             this.bt_grid_tratamentos = new System.Windows.Forms.Button();
             this.bt_parcelas = new System.Windows.Forms.Button();
             this.bt_grid_pacientes = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_est_parcelas = new System.Windows.Forms.Label();
+            this.lbl_est_prontuarios = new System.Windows.Forms.Label();
+            this.lbl_est_tratamentos = new System.Windows.Forms.Label();
             this.lbl_est_pacientes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rodape = new System.Windows.Forms.Panel();
@@ -79,9 +79,9 @@
             this.gb_home.Controls.Add(this.bt_grid_tratamentos);
             this.gb_home.Controls.Add(this.bt_parcelas);
             this.gb_home.Controls.Add(this.bt_grid_pacientes);
-            this.gb_home.Controls.Add(this.label3);
-            this.gb_home.Controls.Add(this.label2);
-            this.gb_home.Controls.Add(this.label1);
+            this.gb_home.Controls.Add(this.lbl_est_parcelas);
+            this.gb_home.Controls.Add(this.lbl_est_prontuarios);
+            this.gb_home.Controls.Add(this.lbl_est_tratamentos);
             this.gb_home.Controls.Add(this.lbl_est_pacientes);
             this.gb_home.Controls.Add(this.lbl_bem_vindo);
             this.gb_home.Location = new System.Drawing.Point(426, 42);
@@ -125,36 +125,37 @@
             this.bt_grid_pacientes.Size = new System.Drawing.Size(32, 35);
             this.bt_grid_pacientes.TabIndex = 7;
             this.bt_grid_pacientes.UseVisualStyleBackColor = true;
+            this.bt_grid_pacientes.Click += new System.EventHandler(this.bt_grid_pacientes_Click);
             // 
-            // label3
+            // lbl_est_parcelas
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(73, 242);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 16);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "5 Parcelas atrasadas";
+            this.lbl_est_parcelas.AutoSize = true;
+            this.lbl_est_parcelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_est_parcelas.Location = new System.Drawing.Point(73, 242);
+            this.lbl_est_parcelas.Name = "lbl_est_parcelas";
+            this.lbl_est_parcelas.Size = new System.Drawing.Size(156, 16);
+            this.lbl_est_parcelas.TabIndex = 6;
+            this.lbl_est_parcelas.Text = "5 Parcelas atrasadas";
             // 
-            // label2
+            // lbl_est_prontuarios
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(70, 134);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(181, 16);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "15 Prontuarios em aberto\r\n";
+            this.lbl_est_prontuarios.AutoSize = true;
+            this.lbl_est_prontuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_est_prontuarios.Location = new System.Drawing.Point(70, 134);
+            this.lbl_est_prontuarios.Name = "lbl_est_prontuarios";
+            this.lbl_est_prontuarios.Size = new System.Drawing.Size(181, 16);
+            this.lbl_est_prontuarios.TabIndex = 5;
+            this.lbl_est_prontuarios.Text = "15 Prontuarios em aberto\r\n";
             // 
-            // label1
+            // lbl_est_tratamentos
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(70, 188);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(277, 16);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "10 Tratamentos criados até o momento";
+            this.lbl_est_tratamentos.AutoSize = true;
+            this.lbl_est_tratamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_est_tratamentos.Location = new System.Drawing.Point(70, 188);
+            this.lbl_est_tratamentos.Name = "lbl_est_tratamentos";
+            this.lbl_est_tratamentos.Size = new System.Drawing.Size(277, 16);
+            this.lbl_est_tratamentos.TabIndex = 4;
+            this.lbl_est_tratamentos.Text = "10 Tratamentos criados até o momento";
             // 
             // lbl_est_pacientes
             // 
@@ -357,9 +358,9 @@
         private System.Windows.Forms.Button bt_grid_tratamentos;
         private System.Windows.Forms.Button bt_parcelas;
         private System.Windows.Forms.Button bt_grid_pacientes;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_est_parcelas;
+        private System.Windows.Forms.Label lbl_est_prontuarios;
+        private System.Windows.Forms.Label lbl_est_tratamentos;
         private System.Windows.Forms.Label lbl_est_pacientes;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;

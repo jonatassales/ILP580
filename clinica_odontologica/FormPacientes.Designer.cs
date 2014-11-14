@@ -195,6 +195,7 @@
             this.Controls.Add(this.tb_pacientes_nome);
             this.Controls.Add(this.bt_pacientes_cadastrar);
             this.Name = "FormPacientes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
