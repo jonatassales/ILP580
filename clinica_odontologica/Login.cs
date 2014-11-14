@@ -44,7 +44,7 @@ namespace clinica_odontologica
             if (username != "" && password != "")
             {
                 Usuarios objUsuarios = new Usuarios();
-                bool result = objUsuarios.checkLogin(username, password);
+                bool result = objUsuarios.checkLogin(username, password.GetHashCode().ToString());
 
                 if (result)
                 {
@@ -53,7 +53,7 @@ namespace clinica_odontologica
 
                     //PEGANDO DADOS DO USUARIO
                     this.campos = "id, nome";
-                    this.filtro = "WHERE username = '"+username+"' AND password = '"+password+"'";
+                    this.filtro = "WHERE username = '" + username + "' AND password = '" + password.GetHashCode().ToString() + "'";
                     DataTable rs = objUsuarios.getUsuarios(campos, filtro);
                     Program.usuario = rs.Rows[0].ItemArray[1].ToString();
                     Program.usuario_id = rs.Rows[0].ItemArray[0].ToString();
