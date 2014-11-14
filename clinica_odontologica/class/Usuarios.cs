@@ -46,11 +46,10 @@ namespace clinica_odontologica
 
         public DataTable getUsuarios(string campos, string filtro)
         {
-
             return this.find("SELECT " + ((campos == "") ? "*" : campos) + " FROM usuarios " + filtro);
         }
 
-        public DataTable getUsuariosById(int id)
+        public DataTable getUsuarioById(int id)
         {
             return this.find("SELECT * FROM usuarios WHERE id = " + id);
         }

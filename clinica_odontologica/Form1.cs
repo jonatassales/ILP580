@@ -101,8 +101,8 @@ namespace clinica_odontologica
 
         private void bt_grid_pacientes_Click(object sender, EventArgs e)
         {
-            FormUsuario form = new FormUsuario();
-            form.Show();
+            UsuariosGrid grid_usuarios = new UsuariosGrid();
+            grid_usuarios.Show();
         }
     }
 }
