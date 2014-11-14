@@ -12,6 +12,14 @@ namespace clinica_odontologica
 {
     public partial class Home : Form
     {
+
+        //GLOBAIS
+        public string campos;
+        public string filtro;
+
+        //BOOTSTRAP
+        Pacientes objPacientes = new Pacientes();
+
         public int usuario_id;
         public Home()
         {
@@ -23,6 +31,19 @@ namespace clinica_odontologica
             Login formLogin = new Login();
             formLogin.ShowDialog();
             lbl_bem_vindo.Text = "Bem-vindo Dr. " + Program.usuario;
+
+            //PEGANDO DADOS DE APRESENTAÇÃO
+
+            //PACIENTES
+            int numPacientes = objPacientes.getQuantPacientes();
+            lbl_est_pacientes.Text = numPacientes + " Pacientes cadastrados até o momento.";
+
+            //PRONTUARIOS
+
+            //TRATAMENTOS
+
+            //PARCELAS
+
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
