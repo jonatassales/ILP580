@@ -29,6 +29,13 @@ namespace clinica_odontologica
 
         private void FormHome_Load(object sender, EventArgs e)
         {
+            //RENDERIZANDO A HOME
+            pnl_home.Visible = true;
+            pnl_home.Width = 900;
+            pnl_home.Height = 290;
+            pnl_home.Left = 0;
+            pnl_home.Top = 75;
+
             Login formLogin = new Login();
             formLogin.ShowDialog();
             lbl_bem_vindo.Text = "Bem-vindo Dr. " + Program.usuario;
@@ -107,14 +114,24 @@ namespace clinica_odontologica
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormUsuario form = new FormUsuario();
-            form.Show();
+            pnl_pacientes.Visible = false;
+            pnl_home.Visible = false;
+            pnl_usuarios.Visible = true;
+            pnl_usuarios.Width = 900;
+            pnl_usuarios.Height = 290;
+            pnl_usuarios.Left = 0;
+            pnl_usuarios.Top = 75;
         }
 
         private void pacientesToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormPacientes form = new FormPacientes();
-            form.Show();
+            pnl_usuarios.Visible = false;
+            pnl_home.Visible = false;
+            pnl_pacientes.Visible = true;
+            pnl_pacientes.Width = 900;
+            pnl_pacientes.Height = 290;
+            pnl_pacientes.Left = 0;
+            pnl_pacientes.Top = 75;
         }
 
         private void bt_grid_pacientes_Click(object sender, EventArgs e)
@@ -129,6 +146,23 @@ namespace clinica_odontologica
         private void bt_usuarios_add_Click(object sender, EventArgs e)
         {
             FormUsuario form = new FormUsuario();
+            form.Show();
+        }
+
+        private void homeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            pnl_pacientes.Visible = false;
+            pnl_usuarios.Visible = false;
+            pnl_home.Visible = true;
+            pnl_home.Width = 900;
+            pnl_home.Height = 290;
+            pnl_home.Left = 0;
+            pnl_home.Top = 75;
+        }
+
+        private void bt_pacientes_add_Click(object sender, EventArgs e)
+        {
+            FormPacientes form = new FormPacientes();
             form.Show();
         }
     }
