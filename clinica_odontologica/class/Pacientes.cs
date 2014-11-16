@@ -48,5 +48,10 @@ namespace clinica_odontologica
         {
             return this.find("SELECT * FROM clientes WHERE id = "+id);
         }
+
+        public DataTable getPacientesBySearch(string campos, string busca) 
+        {
+            return this.find("SELECT " + ((campos == "") ? "*" : campos) + " FROM clientes WHERE nome like '%" + busca + "%'");
+        }
     }
 }

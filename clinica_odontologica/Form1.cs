@@ -16,6 +16,7 @@ namespace clinica_odontologica
         //GLOBAIS
         public string campos;
         public string filtro;
+        public string busca;
 
         //BOOTSTRAP
         Pacientes objPacientes = new Pacientes();
@@ -90,11 +91,12 @@ namespace clinica_odontologica
             }
             //----------------------------------------------------------------------------------------
 
-            //USUARIOS--------------------------------------------------------------------------------
             int id_dentista = int.Parse(Program.usuario_id);
+
+            //USUARIOS--------------------------------------------------------------------------------
             campos = "nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
-            DataTable rs = objUsuarios.getUsuarios(campos, "");
-            dgv_usuarios.DataSource = rs;
+            DataTable rsUsuarios = objUsuarios.getUsuarios(campos, "");
+            dgv_usuarios.DataSource = rsUsuarios;
 
             int numUsuarios = objUsuarios.getQuantUsuarios();
             lbl_usuarios_total.Text = "Total " + numUsuarios;
@@ -102,7 +104,11 @@ namespace clinica_odontologica
             //----------------------------------------------------------------------------------------
 
             //PACIENTES-------------------------------------------------------------------------------
+            campos = "nome as 'Nome', email as 'E-mail', nascimento as 'Data de Nascimento', telefone as 'Telefone'";
+            DataTable rsPacientes = objPacientes.getPacientes(campos, "");
+            dgv_pacientes.DataSource = rsPacientes;
 
+            lbl_pacientes_total.Text = "Total " + numPacientes;
             //----------------------------------------------------------------------------------------
 
         }
@@ -164,6 +170,14 @@ namespace clinica_odontologica
         {
             FormPacientes form = new FormPacientes();
             form.Show();
+        }
+
+        private void tb_pacientes_busca_KeyUp(object sender, KeyEventArgs e)
+        {
+            this.busca = tb_pacientes_busca.Text;
+            this.campos = "nome as 'Nome', email as 'E-mail', nascimento as 'Data de Nascimento', telefone as 'Telefone'";
+            DataTable rsBuscaPacientes = objPacientes.getPacientesBySearch(campos, busca);
+            dgv_pacientes.DataSource = rsBuscaPacientes;
         }
     }
 }
