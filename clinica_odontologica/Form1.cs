@@ -19,6 +19,7 @@ namespace clinica_odontologica
 
         //BOOTSTRAP
         Pacientes objPacientes = new Pacientes();
+        Usuarios objUsuarios = new Usuarios();
 
         public int usuario_id;
         public Home()
@@ -34,6 +35,7 @@ namespace clinica_odontologica
 
             //PEGANDO DADOS DE APRESENTAÇÃO
 
+            //HOME------------------------------------------------------------------------------------
             //PACIENTES
             int numPacientes = objPacientes.getQuantPacientes();
 
@@ -79,6 +81,22 @@ namespace clinica_odontologica
             {
                 lbl_est_parcelas.Text = "Nenhuma parcela em atraso.";
             }
+            //----------------------------------------------------------------------------------------
+
+            //USUARIOS--------------------------------------------------------------------------------
+            int id_dentista = int.Parse(Program.usuario_id);
+            campos = "nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
+            DataTable rs = objUsuarios.getUsuarios(campos, "");
+            dgv_usuarios.DataSource = rs;
+
+            int numUsuarios = objUsuarios.getQuantUsuarios();
+            lbl_usuarios_total.Text = "Total " + numUsuarios;
+
+            //----------------------------------------------------------------------------------------
+
+            //PACIENTES-------------------------------------------------------------------------------
+
+            //----------------------------------------------------------------------------------------
 
         }
 
@@ -101,8 +119,17 @@ namespace clinica_odontologica
 
         private void bt_grid_pacientes_Click(object sender, EventArgs e)
         {
-            UsuariosGrid grid_usuarios = new UsuariosGrid();
-            grid_usuarios.Show();
+        }
+
+        private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"C:\wamp\www\Fatec\odontology-system\clinica_odontologica\about\documento.pdf");
+        }
+
+        private void bt_usuarios_add_Click(object sender, EventArgs e)
+        {
+            FormUsuario form = new FormUsuario();
+            form.Show();
         }
     }
 }

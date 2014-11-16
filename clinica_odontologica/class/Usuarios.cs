@@ -68,5 +68,11 @@ namespace clinica_odontologica
                 return false;
             }
         }
+
+        public int getQuantUsuarios()
+        {
+
+            return this.findCount("SELECT count(id) FROM usuarios");
+        }
     }
 }

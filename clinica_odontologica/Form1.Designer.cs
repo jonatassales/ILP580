@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lbl_bem_vindo = new System.Windows.Forms.Label();
             this.gb_home = new System.Windows.Forms.GroupBox();
             this.bt_grid_prontuarios = new System.Windows.Forms.Button();
@@ -57,18 +58,28 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnl_home = new System.Windows.Forms.Panel();
+            this.pnl_usuarios = new System.Windows.Forms.Panel();
+            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            this.bt_usuarios_add = new System.Windows.Forms.PictureBox();
+            this.lbl_usuarios_total = new System.Windows.Forms.Label();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.rodape.SuspendLayout();
             this.menu.SuspendLayout();
+            this.pnl_home.SuspendLayout();
+            this.pnl_usuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_bem_vindo
             // 
             this.lbl_bem_vindo.AutoSize = true;
-            this.lbl_bem_vindo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_bem_vindo.Location = new System.Drawing.Point(274, 16);
+            this.lbl_bem_vindo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bem_vindo.Location = new System.Drawing.Point(18, 43);
             this.lbl_bem_vindo.Name = "lbl_bem_vindo";
-            this.lbl_bem_vindo.Size = new System.Drawing.Size(172, 18);
+            this.lbl_bem_vindo.Size = new System.Drawing.Size(149, 18);
             this.lbl_bem_vindo.TabIndex = 2;
             this.lbl_bem_vindo.Text = "Bem-vindo Dr. Fulano";
             // 
@@ -83,10 +94,9 @@
             this.gb_home.Controls.Add(this.lbl_est_prontuarios);
             this.gb_home.Controls.Add(this.lbl_est_tratamentos);
             this.gb_home.Controls.Add(this.lbl_est_pacientes);
-            this.gb_home.Controls.Add(this.lbl_bem_vindo);
-            this.gb_home.Location = new System.Drawing.Point(426, 42);
+            this.gb_home.Location = new System.Drawing.Point(348, 3);
             this.gb_home.Name = "gb_home";
-            this.gb_home.Size = new System.Drawing.Size(452, 302);
+            this.gb_home.Size = new System.Drawing.Size(510, 283);
             this.gb_home.TabIndex = 3;
             this.gb_home.TabStop = false;
             // 
@@ -170,9 +180,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(28, 42);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(344, 302);
+            this.pictureBox1.Size = new System.Drawing.Size(309, 289);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -181,6 +191,7 @@
             // 
             this.rodape.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rodape.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rodape.BackgroundImage")));
+            this.rodape.Controls.Add(this.pnl_home);
             this.rodape.Location = new System.Drawing.Point(0, 363);
             this.rodape.Name = "rodape";
             this.rodape.Size = new System.Drawing.Size(890, 77);
@@ -300,6 +311,7 @@
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
             this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
+            this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -308,16 +320,80 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
+            // pnl_home
+            // 
+            this.pnl_home.Controls.Add(this.pictureBox1);
+            this.pnl_home.Controls.Add(this.gb_home);
+            this.pnl_home.Location = new System.Drawing.Point(56, 19);
+            this.pnl_home.Name = "pnl_home";
+            this.pnl_home.Size = new System.Drawing.Size(35, 31);
+            this.pnl_home.TabIndex = 4;
+            // 
+            // pnl_usuarios
+            // 
+            this.pnl_usuarios.Controls.Add(this.lbl_usuarios_total);
+            this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
+            this.pnl_usuarios.Controls.Add(this.dgv_usuarios);
+            this.pnl_usuarios.Location = new System.Drawing.Point(0, 64);
+            this.pnl_usuarios.Name = "pnl_usuarios";
+            this.pnl_usuarios.Size = new System.Drawing.Size(890, 301);
+            this.pnl_usuarios.TabIndex = 5;
+            // 
+            // dgv_usuarios
+            // 
+            this.dgv_usuarios.AllowUserToAddRows = false;
+            this.dgv_usuarios.AllowUserToResizeColumns = false;
+            this.dgv_usuarios.AllowUserToResizeRows = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("MS Reference Specialty", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgv_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_usuarios.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_usuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgv_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgv_usuarios.GridColor = System.Drawing.Color.White;
+            this.dgv_usuarios.Location = new System.Drawing.Point(21, 37);
+            this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.Size = new System.Drawing.Size(850, 249);
+            this.dgv_usuarios.TabIndex = 1;
+            // 
+            // bt_usuarios_add
+            // 
+            this.bt_usuarios_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_usuarios_add.Image = ((System.Drawing.Image)(resources.GetObject("bt_usuarios_add.Image")));
+            this.bt_usuarios_add.Location = new System.Drawing.Point(845, 3);
+            this.bt_usuarios_add.Name = "bt_usuarios_add";
+            this.bt_usuarios_add.Size = new System.Drawing.Size(26, 28);
+            this.bt_usuarios_add.TabIndex = 2;
+            this.bt_usuarios_add.TabStop = false;
+            this.bt_usuarios_add.Click += new System.EventHandler(this.bt_usuarios_add_Click);
+            // 
+            // lbl_usuarios_total
+            // 
+            this.lbl_usuarios_total.AutoSize = true;
+            this.lbl_usuarios_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuarios_total.Location = new System.Drawing.Point(18, 15);
+            this.lbl_usuarios_total.Name = "lbl_usuarios_total";
+            this.lbl_usuarios_total.Size = new System.Drawing.Size(57, 16);
+            this.lbl_usuarios_total.TabIndex = 7;
+            this.lbl_usuarios_total.Text = "Total 0";
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(890, 440);
-            this.Controls.Add(this.gb_home);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pnl_usuarios);
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
+            this.Controls.Add(this.lbl_bem_vindo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menu;
@@ -327,8 +403,14 @@
             this.gb_home.ResumeLayout(false);
             this.gb_home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.rodape.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            this.pnl_home.ResumeLayout(false);
+            this.pnl_usuarios.ResumeLayout(false);
+            this.pnl_usuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,6 +446,11 @@
         private System.Windows.Forms.Label lbl_est_pacientes;
         private System.Windows.Forms.ToolStripMenuItem configuraçõesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.Panel pnl_home;
+        private System.Windows.Forms.Panel pnl_usuarios;
+        private System.Windows.Forms.DataGridView dgv_usuarios;
+        private System.Windows.Forms.PictureBox bt_usuarios_add;
+        private System.Windows.Forms.Label lbl_usuarios_total;
     }
 }
 
