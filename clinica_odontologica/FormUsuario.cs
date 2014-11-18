@@ -12,8 +12,17 @@ namespace clinica_odontologica
 {
     public partial class FormUsuario : Form
     {
+
+        //OBJETOS
         Usuarios objUsuario = new Usuarios();
+
+        //GLOBALS
         public int id_usuario;
+        public string filtro;
+        public string[] chave;
+        public string[] valor;
+
+
         public FormUsuario(int id = 0)
         {
             if (id != 0)
@@ -25,7 +34,25 @@ namespace clinica_odontologica
 
         private void bt_usuario_cadastrar_Click(object sender, EventArgs e)
         {
-            this.objUsuario.setUsuarios(tb_usuario_nome.Text,tb_usuario_email.Text,2,tb_usuario_username.Text,tb_usuario_password.Text);
+            if (this.id_usuario > 0)
+            {
+                //EDIT
+                this.filtro = "WHERE id = " + this.id_usuario;
+                this.chave[0] = "nome";
+                this.valor[0] = "";
+                this.chave[1] = "email";
+                this.valor[0] = "";
+                this.chave[2] = "username";
+                this.valor[0] = "";
+                this.chave[3] = "password"; //HASH
+
+                this.objUsuario.updateUsuarios(this.filtro, this.chave, this.valor);
+            }
+            else
+            { 
+                //SET
+                this.objUsuario.setUsuarios(tb_usuario_nome.Text, tb_usuario_email.Text, 2, tb_usuario_username.Text, tb_usuario_password.Text);
+            }
         }
 
         private void FormUsuario_Load(object sender, EventArgs e)
