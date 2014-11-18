@@ -69,7 +69,6 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.rodape.SuspendLayout();
             this.pnl_pacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_pacientes_add)).BeginInit();
@@ -198,8 +197,6 @@
             // 
             this.rodape.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rodape.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rodape.BackgroundImage")));
-            this.rodape.Controls.Add(this.pnl_pacientes);
-            this.rodape.Controls.Add(this.pnl_home);
             this.rodape.Location = new System.Drawing.Point(0, 363);
             this.rodape.Name = "rodape";
             this.rodape.Size = new System.Drawing.Size(890, 77);
@@ -212,7 +209,7 @@
             this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
             this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
             this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
-            this.pnl_pacientes.Location = new System.Drawing.Point(513, 17);
+            this.pnl_pacientes.Location = new System.Drawing.Point(617, 251);
             this.pnl_pacientes.Name = "pnl_pacientes";
             this.pnl_pacientes.Size = new System.Drawing.Size(45, 29);
             this.pnl_pacientes.TabIndex = 8;
@@ -271,7 +268,7 @@
             this.pnl_home.BackColor = System.Drawing.Color.Transparent;
             this.pnl_home.Controls.Add(this.pictureBox1);
             this.pnl_home.Controls.Add(this.gb_home);
-            this.pnl_home.Location = new System.Drawing.Point(30, 14);
+            this.pnl_home.Location = new System.Drawing.Point(345, 266);
             this.pnl_home.Name = "pnl_home";
             this.pnl_home.Size = new System.Drawing.Size(32, 36);
             this.pnl_home.TabIndex = 4;
@@ -282,9 +279,9 @@
             this.pnl_usuarios.Controls.Add(this.dgv_usuarios);
             this.pnl_usuarios.Controls.Add(this.lbl_usuarios_total);
             this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
-            this.pnl_usuarios.Location = new System.Drawing.Point(0, 64);
+            this.pnl_usuarios.Location = new System.Drawing.Point(805, 297);
             this.pnl_usuarios.Name = "pnl_usuarios";
-            this.pnl_usuarios.Size = new System.Drawing.Size(890, 293);
+            this.pnl_usuarios.Size = new System.Drawing.Size(85, 60);
             this.pnl_usuarios.TabIndex = 5;
             this.pnl_usuarios.Visible = false;
             // 
@@ -458,7 +455,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(890, 440);
+            this.Controls.Add(this.pnl_home);
             this.Controls.Add(this.pnl_usuarios);
+            this.Controls.Add(this.pnl_pacientes);
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.lbl_bem_vindo);
@@ -471,7 +470,6 @@
             this.gb_home.ResumeLayout(false);
             this.gb_home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.rodape.ResumeLayout(false);
             this.pnl_pacientes.ResumeLayout(false);
             this.pnl_pacientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).EndInit();

@@ -110,7 +110,6 @@ namespace clinica_odontologica
 
             lbl_pacientes_total.Text = "Total " + numPacientes;
             //----------------------------------------------------------------------------------------
-
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)

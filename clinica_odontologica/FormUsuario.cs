@@ -18,6 +18,7 @@ namespace clinica_odontologica
 
         //GLOBALS
         public int id_usuario;
+        public string campos;
         public string filtro;
         public string[] chave;
         public string[] valor;
@@ -37,24 +38,41 @@ namespace clinica_odontologica
             if (this.id_usuario > 0)
             {
                 //EDIT
+                this.valor = new string[4];
+                this.chave = new string[4];
                 this.filtro = "WHERE id = " + this.id_usuario;
                 this.chave[0] = "nome";
-                this.valor[0] = "";
+                this.valor[0] = tb_usuario_nome.Text;
                 this.chave[1] = "email";
-                this.valor[0] = "";
+                this.valor[1] = tb_usuario_email.Text;
                 this.chave[2] = "username";
-                this.valor[0] = "";
-                this.chave[3] = "password"; //HASH
+                this.valor[2] = tb_usuario_username.Text;
+                this.chave[3] = "password";
+                this.valor[3] = tb_usuario_password.GetHashCode().ToString();
 
                 this.objUsuario.updateUsuarios(this.filtro, this.chave, this.valor);
+
+                this.refreshUsuarios();
+                MessageBox.Show("Dados atualizados com sucesso!");
             }
             else
             { 
                 //SET
                 this.objUsuario.setUsuarios(tb_usuario_nome.Text, tb_usuario_email.Text, 2, tb_usuario_username.Text, tb_usuario_password.Text);
+                this.refreshUsuarios();
+                MessageBox.Show("Dados salvos com sucesso!");
             }
         }
 
+        private void refreshUsuarios()
+        {
+            campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
+            DataTable rsUsuarios = this.objUsuario.getUsuarios(campos, "");
+            Program.home.dgv_usuarios.DataSource = rsUsuarios;
+
+            int numUsuarios = objUsuario.getQuantUsuarios();
+            lbl_usuarios_total.Text = "Total " + numUsuarios;
+        }
         private void FormUsuario_Load(object sender, EventArgs e)
         {
             if (id_usuario > 0)
