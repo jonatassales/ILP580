@@ -41,11 +41,16 @@
             this.lbl_est_pacientes = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rodape = new System.Windows.Forms.Panel();
+            this.pnl_pacientes = new System.Windows.Forms.Panel();
+            this.tb_pacientes_busca = new System.Windows.Forms.TextBox();
+            this.dgv_pacientes = new System.Windows.Forms.DataGridView();
+            this.lbl_pacientes_total = new System.Windows.Forms.Label();
+            this.bt_pacientes_add = new System.Windows.Forms.PictureBox();
+            this.pnl_home = new System.Windows.Forms.Panel();
             this.pnl_usuarios = new System.Windows.Forms.Panel();
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
             this.lbl_usuarios_total = new System.Windows.Forms.Label();
             this.bt_usuarios_add = new System.Windows.Forms.PictureBox();
-            this.pnl_home = new System.Windows.Forms.Panel();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pacientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,21 +67,17 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnl_pacientes = new System.Windows.Forms.Panel();
-            this.tb_pacientes_busca = new System.Windows.Forms.TextBox();
-            this.dgv_pacientes = new System.Windows.Forms.DataGridView();
-            this.lbl_pacientes_total = new System.Windows.Forms.Label();
-            this.bt_pacientes_add = new System.Windows.Forms.PictureBox();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.pnl_usuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).BeginInit();
-            this.pnl_home.SuspendLayout();
-            this.menu.SuspendLayout();
+            this.rodape.SuspendLayout();
             this.pnl_pacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_pacientes_add)).BeginInit();
+            this.pnl_home.SuspendLayout();
+            this.pnl_usuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_bem_vindo
@@ -197,10 +198,83 @@
             // 
             this.rodape.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rodape.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rodape.BackgroundImage")));
+            this.rodape.Controls.Add(this.pnl_pacientes);
+            this.rodape.Controls.Add(this.pnl_home);
             this.rodape.Location = new System.Drawing.Point(0, 363);
             this.rodape.Name = "rodape";
             this.rodape.Size = new System.Drawing.Size(890, 77);
             this.rodape.TabIndex = 1;
+            // 
+            // pnl_pacientes
+            // 
+            this.pnl_pacientes.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_pacientes.Controls.Add(this.tb_pacientes_busca);
+            this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
+            this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
+            this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
+            this.pnl_pacientes.Location = new System.Drawing.Point(513, 17);
+            this.pnl_pacientes.Name = "pnl_pacientes";
+            this.pnl_pacientes.Size = new System.Drawing.Size(45, 29);
+            this.pnl_pacientes.TabIndex = 8;
+            this.pnl_pacientes.Visible = false;
+            // 
+            // tb_pacientes_busca
+            // 
+            this.tb_pacientes_busca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_pacientes_busca.Location = new System.Drawing.Point(659, 3);
+            this.tb_pacientes_busca.Multiline = true;
+            this.tb_pacientes_busca.Name = "tb_pacientes_busca";
+            this.tb_pacientes_busca.Size = new System.Drawing.Size(180, 28);
+            this.tb_pacientes_busca.TabIndex = 11;
+            this.tb_pacientes_busca.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_pacientes_busca_KeyUp);
+            // 
+            // dgv_pacientes
+            // 
+            this.dgv_pacientes.AllowUserToAddRows = false;
+            this.dgv_pacientes.AllowUserToDeleteRows = false;
+            this.dgv_pacientes.AllowUserToResizeColumns = false;
+            this.dgv_pacientes.AllowUserToResizeRows = false;
+            this.dgv_pacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_pacientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgv_pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_pacientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dgv_pacientes.Location = new System.Drawing.Point(22, 34);
+            this.dgv_pacientes.MultiSelect = false;
+            this.dgv_pacientes.Name = "dgv_pacientes";
+            this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgv_pacientes.Size = new System.Drawing.Size(849, 247);
+            this.dgv_pacientes.TabIndex = 9;
+            // 
+            // lbl_pacientes_total
+            // 
+            this.lbl_pacientes_total.AutoSize = true;
+            this.lbl_pacientes_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pacientes_total.Location = new System.Drawing.Point(18, 15);
+            this.lbl_pacientes_total.Name = "lbl_pacientes_total";
+            this.lbl_pacientes_total.Size = new System.Drawing.Size(57, 16);
+            this.lbl_pacientes_total.TabIndex = 7;
+            this.lbl_pacientes_total.Text = "Total 0";
+            // 
+            // bt_pacientes_add
+            // 
+            this.bt_pacientes_add.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bt_pacientes_add.Image = ((System.Drawing.Image)(resources.GetObject("bt_pacientes_add.Image")));
+            this.bt_pacientes_add.Location = new System.Drawing.Point(845, 3);
+            this.bt_pacientes_add.Name = "bt_pacientes_add";
+            this.bt_pacientes_add.Size = new System.Drawing.Size(26, 28);
+            this.bt_pacientes_add.TabIndex = 2;
+            this.bt_pacientes_add.TabStop = false;
+            this.bt_pacientes_add.Click += new System.EventHandler(this.bt_pacientes_add_Click);
+            // 
+            // pnl_home
+            // 
+            this.pnl_home.BackColor = System.Drawing.Color.Transparent;
+            this.pnl_home.Controls.Add(this.pictureBox1);
+            this.pnl_home.Controls.Add(this.gb_home);
+            this.pnl_home.Location = new System.Drawing.Point(30, 14);
+            this.pnl_home.Name = "pnl_home";
+            this.pnl_home.Size = new System.Drawing.Size(32, 36);
+            this.pnl_home.TabIndex = 4;
             // 
             // pnl_usuarios
             // 
@@ -208,9 +282,9 @@
             this.pnl_usuarios.Controls.Add(this.dgv_usuarios);
             this.pnl_usuarios.Controls.Add(this.lbl_usuarios_total);
             this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
-            this.pnl_usuarios.Location = new System.Drawing.Point(601, 228);
+            this.pnl_usuarios.Location = new System.Drawing.Point(0, 64);
             this.pnl_usuarios.Name = "pnl_usuarios";
-            this.pnl_usuarios.Size = new System.Drawing.Size(32, 32);
+            this.pnl_usuarios.Size = new System.Drawing.Size(890, 293);
             this.pnl_usuarios.TabIndex = 5;
             this.pnl_usuarios.Visible = false;
             // 
@@ -227,9 +301,11 @@
             this.dgv_usuarios.Location = new System.Drawing.Point(22, 34);
             this.dgv_usuarios.MultiSelect = false;
             this.dgv_usuarios.Name = "dgv_usuarios";
+            this.dgv_usuarios.ReadOnly = true;
             this.dgv_usuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_usuarios.Size = new System.Drawing.Size(849, 256);
             this.dgv_usuarios.TabIndex = 8;
+            this.dgv_usuarios.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_usuarios_RowHeaderMouseClick);
             // 
             // lbl_usuarios_total
             // 
@@ -251,16 +327,6 @@
             this.bt_usuarios_add.TabIndex = 2;
             this.bt_usuarios_add.TabStop = false;
             this.bt_usuarios_add.Click += new System.EventHandler(this.bt_usuarios_add_Click);
-            // 
-            // pnl_home
-            // 
-            this.pnl_home.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_home.Controls.Add(this.pictureBox1);
-            this.pnl_home.Controls.Add(this.gb_home);
-            this.pnl_home.Location = new System.Drawing.Point(486, 211);
-            this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(37, 21);
-            this.pnl_home.TabIndex = 4;
             // 
             // menu
             // 
@@ -386,76 +452,13 @@
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // pnl_pacientes
-            // 
-            this.pnl_pacientes.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_pacientes.Controls.Add(this.tb_pacientes_busca);
-            this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
-            this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
-            this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
-            this.pnl_pacientes.Location = new System.Drawing.Point(681, 203);
-            this.pnl_pacientes.Name = "pnl_pacientes";
-            this.pnl_pacientes.Size = new System.Drawing.Size(45, 29);
-            this.pnl_pacientes.TabIndex = 8;
-            this.pnl_pacientes.Visible = false;
-            // 
-            // tb_pacientes_busca
-            // 
-            this.tb_pacientes_busca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_pacientes_busca.Location = new System.Drawing.Point(659, 3);
-            this.tb_pacientes_busca.Multiline = true;
-            this.tb_pacientes_busca.Name = "tb_pacientes_busca";
-            this.tb_pacientes_busca.Size = new System.Drawing.Size(180, 28);
-            this.tb_pacientes_busca.TabIndex = 11;
-            this.tb_pacientes_busca.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_pacientes_busca_KeyUp);
-            // 
-            // dgv_pacientes
-            // 
-            this.dgv_pacientes.AllowUserToAddRows = false;
-            this.dgv_pacientes.AllowUserToDeleteRows = false;
-            this.dgv_pacientes.AllowUserToResizeColumns = false;
-            this.dgv_pacientes.AllowUserToResizeRows = false;
-            this.dgv_pacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_pacientes.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgv_pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_pacientes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_pacientes.Location = new System.Drawing.Point(22, 34);
-            this.dgv_pacientes.MultiSelect = false;
-            this.dgv_pacientes.Name = "dgv_pacientes";
-            this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv_pacientes.Size = new System.Drawing.Size(849, 247);
-            this.dgv_pacientes.TabIndex = 9;
-            // 
-            // lbl_pacientes_total
-            // 
-            this.lbl_pacientes_total.AutoSize = true;
-            this.lbl_pacientes_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pacientes_total.Location = new System.Drawing.Point(18, 15);
-            this.lbl_pacientes_total.Name = "lbl_pacientes_total";
-            this.lbl_pacientes_total.Size = new System.Drawing.Size(57, 16);
-            this.lbl_pacientes_total.TabIndex = 7;
-            this.lbl_pacientes_total.Text = "Total 0";
-            // 
-            // bt_pacientes_add
-            // 
-            this.bt_pacientes_add.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_pacientes_add.Image = ((System.Drawing.Image)(resources.GetObject("bt_pacientes_add.Image")));
-            this.bt_pacientes_add.Location = new System.Drawing.Point(845, 3);
-            this.bt_pacientes_add.Name = "bt_pacientes_add";
-            this.bt_pacientes_add.Size = new System.Drawing.Size(26, 28);
-            this.bt_pacientes_add.TabIndex = 2;
-            this.bt_pacientes_add.TabStop = false;
-            this.bt_pacientes_add.Click += new System.EventHandler(this.bt_pacientes_add_Click);
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(890, 440);
-            this.Controls.Add(this.pnl_pacientes);
             this.Controls.Add(this.pnl_usuarios);
-            this.Controls.Add(this.pnl_home);
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.lbl_bem_vindo);
@@ -468,17 +471,18 @@
             this.gb_home.ResumeLayout(false);
             this.gb_home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.pnl_usuarios.ResumeLayout(false);
-            this.pnl_usuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).EndInit();
-            this.pnl_home.ResumeLayout(false);
-            this.menu.ResumeLayout(false);
-            this.menu.PerformLayout();
+            this.rodape.ResumeLayout(false);
             this.pnl_pacientes.ResumeLayout(false);
             this.pnl_pacientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_pacientes_add)).EndInit();
+            this.pnl_home.ResumeLayout(false);
+            this.pnl_usuarios.ResumeLayout(false);
+            this.pnl_usuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

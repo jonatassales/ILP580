@@ -134,6 +134,7 @@
             this.Controls.Add(this.bt_usuario_cadastrar);
             this.Name = "FormUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Load += new System.EventHandler(this.FormUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

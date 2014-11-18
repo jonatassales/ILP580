@@ -51,7 +51,7 @@ namespace clinica_odontologica
 
         public DataTable getUsuarioById(int id)
         {
-            return this.find("SELECT * FROM usuarios WHERE id = " + id);
+            return this.find("SELECT nome, email, username FROM usuarios WHERE id = " + id);
         }
 
         public bool checkLogin(string username, string password)

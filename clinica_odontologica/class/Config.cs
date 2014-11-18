@@ -1,6 +1,6 @@
 ﻿/*
  * MySQL CRUD created by Jonatas
- * Fork me on GitHub github.com/jonatassales
+ * Fork me on GitHub github.com/jonatassales/odontology-system
  */
 
 using System;

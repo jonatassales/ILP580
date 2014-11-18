@@ -76,5 +76,10 @@ namespace clinica_odontologica
         {
             this.login();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

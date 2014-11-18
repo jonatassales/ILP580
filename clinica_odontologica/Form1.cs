@@ -94,7 +94,7 @@ namespace clinica_odontologica
             int id_dentista = int.Parse(Program.usuario_id);
 
             //USUARIOS--------------------------------------------------------------------------------
-            campos = "nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
+            campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
             DataTable rsUsuarios = objUsuarios.getUsuarios(campos, "");
             dgv_usuarios.DataSource = rsUsuarios;
 
@@ -142,6 +142,13 @@ namespace clinica_odontologica
 
         private void bt_grid_pacientes_Click(object sender, EventArgs e)
         {
+            pnl_usuarios.Visible = false;
+            pnl_home.Visible = false;
+            pnl_pacientes.Visible = true;
+            pnl_pacientes.Width = 900;
+            pnl_pacientes.Height = 290;
+            pnl_pacientes.Left = 0;
+            pnl_pacientes.Top = 75;
         }
 
         private void sobreToolStripMenuItem_Click(object sender, EventArgs e)
@@ -178,6 +185,13 @@ namespace clinica_odontologica
             this.campos = "nome as 'Nome', email as 'E-mail', nascimento as 'Data de Nascimento', telefone as 'Telefone'";
             DataTable rsBuscaPacientes = objPacientes.getPacientesBySearch(campos, busca);
             dgv_pacientes.DataSource = rsBuscaPacientes;
+        }
+
+        private void dgv_usuarios_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int id = int.Parse(dgv_usuarios.CurrentRow.Cells["indice"].Value.ToString());
+            FormUsuario form = new FormUsuario(id);
+            form.Show();
         }
     }
 }
