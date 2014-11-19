@@ -9,8 +9,7 @@ namespace clinica_odontologica
     static class Program
     {
         public static string usuario;
-        public static string usuario_id;
-        public static Home home = new Home(); 
+        public static string usuario_id = "1";
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

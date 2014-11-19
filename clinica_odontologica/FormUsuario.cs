@@ -68,10 +68,10 @@ namespace clinica_odontologica
         {
             campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
             DataTable rsUsuarios = this.objUsuario.getUsuarios(campos, "");
-            Program.home.dgv_usuarios.DataSource = rsUsuarios;
+            Home.dgv_usuarios.DataSource = rsUsuarios;
 
             int numUsuarios = objUsuario.getQuantUsuarios();
-            lbl_usuarios_total.Text = "Total " + numUsuarios;
+            Home.lbl_usuarios_total.Text = "Total " + numUsuarios;
         }
         private void FormUsuario_Load(object sender, EventArgs e)
         {

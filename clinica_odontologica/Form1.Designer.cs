@@ -48,8 +48,8 @@
             this.bt_pacientes_add = new System.Windows.Forms.PictureBox();
             this.pnl_home = new System.Windows.Forms.Panel();
             this.pnl_usuarios = new System.Windows.Forms.Panel();
-            this.dgv_usuarios = new System.Windows.Forms.DataGridView();
-            this.lbl_usuarios_total = new System.Windows.Forms.Label();
+            Home.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            Home.lbl_usuarios_total = new System.Windows.Forms.Label();
             this.bt_usuarios_add = new System.Windows.Forms.PictureBox();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.homeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,12 +69,13 @@
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.rodape.SuspendLayout();
             this.pnl_pacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_pacientes_add)).BeginInit();
             this.pnl_home.SuspendLayout();
             this.pnl_usuarios.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(Home.dgv_usuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).BeginInit();
             this.menu.SuspendLayout();
             this.SuspendLayout();
@@ -197,6 +198,8 @@
             // 
             this.rodape.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rodape.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rodape.BackgroundImage")));
+            this.rodape.Controls.Add(this.pnl_home);
+            this.rodape.Controls.Add(this.pnl_pacientes);
             this.rodape.Location = new System.Drawing.Point(0, 363);
             this.rodape.Name = "rodape";
             this.rodape.Size = new System.Drawing.Size(890, 77);
@@ -209,7 +212,7 @@
             this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
             this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
             this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
-            this.pnl_pacientes.Location = new System.Drawing.Point(617, 251);
+            this.pnl_pacientes.Location = new System.Drawing.Point(540, 31);
             this.pnl_pacientes.Name = "pnl_pacientes";
             this.pnl_pacientes.Size = new System.Drawing.Size(45, 29);
             this.pnl_pacientes.TabIndex = 8;
@@ -268,7 +271,7 @@
             this.pnl_home.BackColor = System.Drawing.Color.Transparent;
             this.pnl_home.Controls.Add(this.pictureBox1);
             this.pnl_home.Controls.Add(this.gb_home);
-            this.pnl_home.Location = new System.Drawing.Point(345, 266);
+            this.pnl_home.Location = new System.Drawing.Point(150, 24);
             this.pnl_home.Name = "pnl_home";
             this.pnl_home.Size = new System.Drawing.Size(32, 36);
             this.pnl_home.TabIndex = 4;
@@ -276,43 +279,43 @@
             // pnl_usuarios
             // 
             this.pnl_usuarios.BackColor = System.Drawing.Color.Transparent;
-            this.pnl_usuarios.Controls.Add(this.dgv_usuarios);
-            this.pnl_usuarios.Controls.Add(this.lbl_usuarios_total);
+            this.pnl_usuarios.Controls.Add(Home.dgv_usuarios);
+            this.pnl_usuarios.Controls.Add(Home.lbl_usuarios_total);
             this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
-            this.pnl_usuarios.Location = new System.Drawing.Point(805, 297);
+            this.pnl_usuarios.Location = new System.Drawing.Point(0, 64);
             this.pnl_usuarios.Name = "pnl_usuarios";
-            this.pnl_usuarios.Size = new System.Drawing.Size(85, 60);
+            this.pnl_usuarios.Size = new System.Drawing.Size(890, 293);
             this.pnl_usuarios.TabIndex = 5;
             this.pnl_usuarios.Visible = false;
             // 
             // dgv_usuarios
             // 
-            this.dgv_usuarios.AllowUserToAddRows = false;
-            this.dgv_usuarios.AllowUserToDeleteRows = false;
-            this.dgv_usuarios.AllowUserToResizeColumns = false;
-            this.dgv_usuarios.AllowUserToResizeRows = false;
-            this.dgv_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_usuarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dgv_usuarios.Location = new System.Drawing.Point(22, 34);
-            this.dgv_usuarios.MultiSelect = false;
-            this.dgv_usuarios.Name = "dgv_usuarios";
-            this.dgv_usuarios.ReadOnly = true;
-            this.dgv_usuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgv_usuarios.Size = new System.Drawing.Size(849, 256);
-            this.dgv_usuarios.TabIndex = 8;
-            this.dgv_usuarios.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_usuarios_RowHeaderMouseClick);
+            Home.dgv_usuarios.AllowUserToAddRows = false;
+            Home.dgv_usuarios.AllowUserToDeleteRows = false;
+            Home.dgv_usuarios.AllowUserToResizeColumns = false;
+            Home.dgv_usuarios.AllowUserToResizeRows = false;
+            Home.dgv_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            Home.dgv_usuarios.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            Home.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Home.dgv_usuarios.Cursor = System.Windows.Forms.Cursors.Hand;
+            Home.dgv_usuarios.Location = new System.Drawing.Point(22, 34);
+            Home.dgv_usuarios.MultiSelect = false;
+            Home.dgv_usuarios.Name = "dgv_usuarios";
+            Home.dgv_usuarios.ReadOnly = true;
+            Home.dgv_usuarios.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            Home.dgv_usuarios.Size = new System.Drawing.Size(849, 256);
+            Home.dgv_usuarios.TabIndex = 8;
+            Home.dgv_usuarios.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_usuarios_RowHeaderMouseClick);
             // 
             // lbl_usuarios_total
             // 
-            this.lbl_usuarios_total.AutoSize = true;
-            this.lbl_usuarios_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuarios_total.Location = new System.Drawing.Point(18, 15);
-            this.lbl_usuarios_total.Name = "lbl_usuarios_total";
-            this.lbl_usuarios_total.Size = new System.Drawing.Size(57, 16);
-            this.lbl_usuarios_total.TabIndex = 7;
-            this.lbl_usuarios_total.Text = "Total 0";
+            Home.lbl_usuarios_total.AutoSize = true;
+            Home.lbl_usuarios_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Home.lbl_usuarios_total.Location = new System.Drawing.Point(18, 15);
+            Home.lbl_usuarios_total.Name = "lbl_usuarios_total";
+            Home.lbl_usuarios_total.Size = new System.Drawing.Size(57, 16);
+            Home.lbl_usuarios_total.TabIndex = 7;
+            Home.lbl_usuarios_total.Text = "Total 0";
             // 
             // bt_usuarios_add
             // 
@@ -455,9 +458,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(890, 440);
-            this.Controls.Add(this.pnl_home);
             this.Controls.Add(this.pnl_usuarios);
-            this.Controls.Add(this.pnl_pacientes);
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.lbl_bem_vindo);
@@ -470,6 +471,7 @@
             this.gb_home.ResumeLayout(false);
             this.gb_home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.rodape.ResumeLayout(false);
             this.pnl_pacientes.ResumeLayout(false);
             this.pnl_pacientes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).EndInit();
@@ -477,7 +479,7 @@
             this.pnl_home.ResumeLayout(false);
             this.pnl_usuarios.ResumeLayout(false);
             this.pnl_usuarios.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(Home.dgv_usuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bt_usuarios_add)).EndInit();
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
@@ -519,11 +521,11 @@
         private System.Windows.Forms.Panel pnl_home;
         private System.Windows.Forms.Panel pnl_usuarios;
         private System.Windows.Forms.PictureBox bt_usuarios_add;
-        private System.Windows.Forms.Label lbl_usuarios_total;
+        public static System.Windows.Forms.Label lbl_usuarios_total;
         private System.Windows.Forms.Panel pnl_pacientes;
         private System.Windows.Forms.Label lbl_pacientes_total;
         private System.Windows.Forms.PictureBox bt_pacientes_add;
-        private System.Windows.Forms.DataGridView dgv_usuarios;
+        public static System.Windows.Forms.DataGridView dgv_usuarios;
         private System.Windows.Forms.DataGridView dgv_pacientes;
         private System.Windows.Forms.TextBox tb_pacientes_busca;
     }
