@@ -85,7 +85,7 @@ namespace clinica_odontologica
 
         private void preenchePaciente(int id) 
         {
-            this.campos = "nome,email,nascimento,endereco,numero,cep,telefone";
+            this.campos = "nome,email,nascimento,endereco,numero,cep,telefone,imagem";
             DataTable rs = this.objPacientes.getPacietesById(this.campos,id);
             tb_pacientes_nome.Text = rs.Rows[0].ItemArray[0].ToString();
             tb_pacientes_email.Text = rs.Rows[0].ItemArray[1].ToString();
@@ -94,6 +94,11 @@ namespace clinica_odontologica
             tb_pacientes_numero.Text = rs.Rows[0].ItemArray[4].ToString();
             tb_pacientes_cep.Text = rs.Rows[0].ItemArray[5].ToString();
             tb_pacientes_telefone.Text = rs.Rows[0].ItemArray[6].ToString();
+
+            if (rs.Rows[0].ItemArray[7].ToString() != "img")  
+            {
+                this.setFormImg(this.id_usuario);
+            }
 
             bt_pacientes_cadastrar.Text = "Editar";
         }
