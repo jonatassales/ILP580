@@ -113,17 +113,25 @@ namespace clinica_odontologica
         private void ofd_pacientes_FileOk(object sender, CancelEventArgs e)
         {
             this.pacientes_file_path = ofd_pacientes.FileName;
-            string file_name = "file.jpg";
+            string file_name = this.id_usuario+"-pacientes-file.jpg";
             try
             {
-                System.IO.File.Copy(this.pacientes_file_path, Program.img_path + ""+file_name);
-                this.objPacientes.saveImg(Program.img_path + "" + file_name, this.id_usuario);
+                System.IO.File.Copy(this.pacientes_file_path, Program.img_path +""+file_name);
+                this.objPacientes.saveImg(file_name, this.id_usuario);
+                this.setFormImg(this.id_usuario);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro: " + ex.Message);
+                MessageBox.Show(file_name);
             }
             
+        }
+
+        private void setFormImg(int id)
+        {
+            DataTable rs = this.objPacientes.getImgById(id);
+            pb_pacientes.ImageLocation = Program.img_path + rs.Rows[0].ItemArray[0].ToString();
         }
 
     }

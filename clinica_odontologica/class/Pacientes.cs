@@ -71,5 +71,10 @@ namespace clinica_odontologica
         {
             this.update("UPDATE clientes SET imagem = '"+img_path+"' WHERE id = "+id); 
         }
+
+        public DataTable getImgById(int id)
+        {
+            return this.find("SELECT imagem FROM clientes WHERE id = "+id);
+        }
     }
 }
