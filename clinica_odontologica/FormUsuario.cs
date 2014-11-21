@@ -52,26 +52,16 @@ namespace clinica_odontologica
 
                 this.objUsuario.updateUsuarios(this.filtro, this.chave, this.valor);
 
-                this.refreshUsuarios();
                 MessageBox.Show("Dados atualizados com sucesso!");
+                this.Close();
             }
             else
             { 
                 //SET
                 this.objUsuario.setUsuarios(tb_usuario_nome.Text, tb_usuario_email.Text, 2, tb_usuario_username.Text, tb_usuario_password.Text);
-                this.refreshUsuarios();
                 MessageBox.Show("Dados salvos com sucesso!");
+                this.Close();
             }
-        }
-
-        private void refreshUsuarios()
-        {
-            campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
-            DataTable rsUsuarios = this.objUsuario.getUsuarios(campos, "");
-            Home.dgv_usuarios.DataSource = rsUsuarios;
-
-            int numUsuarios = objUsuario.getQuantUsuarios();
-            Home.lbl_usuarios_total.Text = "Total " + numUsuarios;
         }
         private void FormUsuario_Load(object sender, EventArgs e)
         {
