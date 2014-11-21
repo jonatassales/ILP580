@@ -208,9 +208,9 @@
             this.pnl_home.BackColor = System.Drawing.Color.Transparent;
             this.pnl_home.Controls.Add(this.pictureBox1);
             this.pnl_home.Controls.Add(this.gb_home);
-            this.pnl_home.Location = new System.Drawing.Point(795, 268);
+            this.pnl_home.Location = new System.Drawing.Point(731, 280);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(95, 97);
+            this.pnl_home.Size = new System.Drawing.Size(51, 38);
             this.pnl_home.TabIndex = 4;
             // 
             // pnl_pacientes
@@ -220,7 +220,7 @@
             this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
             this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
             this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
-            this.pnl_pacientes.Location = new System.Drawing.Point(653, 190);
+            this.pnl_pacientes.Location = new System.Drawing.Point(642, 244);
             this.pnl_pacientes.Name = "pnl_pacientes";
             this.pnl_pacientes.Size = new System.Drawing.Size(83, 45);
             this.pnl_pacientes.TabIndex = 8;
@@ -281,9 +281,9 @@
             this.pnl_usuarios.Controls.Add(this.dgv_usuario);
             this.pnl_usuarios.Controls.Add(this.lbl_usuario_total);
             this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
-            this.pnl_usuarios.Location = new System.Drawing.Point(549, 254);
+            this.pnl_usuarios.Location = new System.Drawing.Point(838, 312);
             this.pnl_usuarios.Name = "pnl_usuarios";
-            this.pnl_usuarios.Size = new System.Drawing.Size(75, 44);
+            this.pnl_usuarios.Size = new System.Drawing.Size(52, 54);
             this.pnl_usuarios.TabIndex = 5;
             this.pnl_usuarios.Visible = false;
             // 
@@ -466,11 +466,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(890, 440);
-            this.Controls.Add(this.pnl_usuarios);
             this.Controls.Add(this.pnl_pacientes);
+            this.Controls.Add(this.pnl_home);
+            this.Controls.Add(this.pnl_usuarios);
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
-            this.Controls.Add(this.pnl_home);
             this.Controls.Add(this.lbl_bem_vindo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

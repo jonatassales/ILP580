@@ -37,6 +37,8 @@ namespace clinica_odontologica
         {
             if (this.id_usuario > 0)
             {
+                bt_usuario_excluir.Visible = true;
+
                 //EDIT
                 this.valor = new string[4];
                 this.chave = new string[4];
