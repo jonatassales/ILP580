@@ -253,6 +253,7 @@
             this.dgv_pacientes.Size = new System.Drawing.Size(849, 247);
             this.dgv_pacientes.TabIndex = 9;
             this.dgv_pacientes.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_pacientes_RowHeaderMouseClick);
+            this.dgv_pacientes.Click += new System.EventHandler(this.dgv_pacientes_Click);
             // 
             // lbl_pacientes_total
             // 
@@ -315,6 +316,7 @@
             this.dgv_usuario.Size = new System.Drawing.Size(848, 258);
             this.dgv_usuario.TabIndex = 11;
             this.dgv_usuario.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_usuario_RowHeaderMouseClick);
+            this.dgv_usuario.Click += new System.EventHandler(this.dgv_usuario_Click);
             // 
             // lbl_usuario_total
             // 

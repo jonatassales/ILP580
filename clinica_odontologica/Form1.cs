@@ -207,5 +207,35 @@ namespace clinica_odontologica
             FormPacientes form = new FormPacientes(id);
             form.Show();
         }
+
+        public void attPacientes()
+        {
+             campos = "id as 'Indice',nome as 'Nome', email as 'E-mail', nascimento as 'Data de Nascimento', telefone as 'Telefone'";
+             DataTable rsPacientes = this.objPacientes.getPacientes(campos, "");
+             dgv_pacientes.DataSource = rsPacientes;
+
+             int numPacientes = this.objPacientes.getQuantPacientes();
+             lbl_pacientes_total.Text = "Total " + numPacientes;
+        }
+
+        public void attUsuarios()
+        {
+            campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
+            DataTable rsUsuarios = this.objUsuarios.getUsuarios(campos, "");
+            dgv_usuario.DataSource = rsUsuarios;
+
+            int numUsuarios = this.objUsuarios.getQuantUsuarios();
+            lbl_usuario_total.Text = "Total " + numUsuarios;
+        }
+
+        private void dgv_pacientes_Click(object sender, EventArgs e)
+        {
+            attPacientes();
+        }
+
+        private void dgv_usuario_Click(object sender, EventArgs e)
+        {
+            attUsuarios();
+        }
     }
 }
