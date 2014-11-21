@@ -48,7 +48,11 @@
             this.bt_pacientes_fechar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.bt_pacientes_upload = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.sfd_pacientes = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_pacientes_email
@@ -202,7 +206,7 @@
             // 
             this.bt_pacientes_fechar.AutoSize = true;
             this.bt_pacientes_fechar.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_pacientes_fechar.Location = new System.Drawing.Point(502, 9);
+            this.bt_pacientes_fechar.Location = new System.Drawing.Point(629, 9);
             this.bt_pacientes_fechar.Name = "bt_pacientes_fechar";
             this.bt_pacientes_fechar.Size = new System.Drawing.Size(16, 16);
             this.bt_pacientes_fechar.TabIndex = 36;
@@ -222,18 +226,43 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label7.Location = new System.Drawing.Point(190, 9);
+            this.label7.Location = new System.Drawing.Point(259, 9);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(182, 46);
             this.label7.TabIndex = 38;
             this.label7.Text = "Pacientes";
+            // 
+            // bt_pacientes_upload
+            // 
+            this.bt_pacientes_upload.Location = new System.Drawing.Point(480, 230);
+            this.bt_pacientes_upload.Name = "bt_pacientes_upload";
+            this.bt_pacientes_upload.Size = new System.Drawing.Size(151, 23);
+            this.bt_pacientes_upload.TabIndex = 39;
+            this.bt_pacientes_upload.Text = "upload";
+            this.bt_pacientes_upload.UseVisualStyleBackColor = true;
+            this.bt_pacientes_upload.Click += new System.EventHandler(this.bt_pacientes_upload_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(480, 73);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(151, 151);
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
+            // sfd_pacientes
+            // 
+            this.sfd_pacientes.FileOk += new System.ComponentModel.CancelEventHandler(this.sfd_pacientes_FileOk);
             // 
             // FormPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
-            this.ClientSize = new System.Drawing.Size(530, 386);
+            this.ClientSize = new System.Drawing.Size(657, 386);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.bt_pacientes_upload);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_pacientes_fechar);
@@ -258,6 +287,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.FormPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +314,8 @@
         private System.Windows.Forms.Label bt_pacientes_fechar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button bt_pacientes_upload;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.SaveFileDialog sfd_pacientes;
     }
 }

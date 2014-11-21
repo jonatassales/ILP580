@@ -21,6 +21,7 @@ namespace clinica_odontologica
         public string filtro;
         public string[] chave;
         public string[] valor;
+        public string photo;
 
         public FormPacientes(int id = 0)
         {
@@ -103,5 +104,17 @@ namespace clinica_odontologica
             MessageBox.Show("Registro excluido com sucesso!");
             this.Close();
         }
+
+        private void sfd_pacientes_FileOk(object sender, CancelEventArgs e)
+        {
+            this.photo = sfd_pacientes.FileName;
+            MessageBox.Show("caminho -> "+this.photo);
+        }
+
+        private void bt_pacientes_upload_Click(object sender, EventArgs e)
+        {
+            sfd_pacientes.ShowDialog();
+        }
+
     }
 }
