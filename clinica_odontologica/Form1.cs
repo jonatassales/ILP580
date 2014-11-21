@@ -192,5 +192,13 @@ namespace clinica_odontologica
             FormUsuario form = new FormUsuario(id);
             form.Show();
         }
+
+        private void tb_usuario_busca_KeyUp(object sender, KeyEventArgs e)
+        {
+            this.busca = tb_usuario_busca.Text;
+            this.campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
+            DataTable rsBuscaUsuarios = objUsuarios.getUsuariosBySearch(campos, busca);
+            dgv_usuario.DataSource = rsBuscaUsuarios;
+        }
     }
 }

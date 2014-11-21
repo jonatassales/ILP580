@@ -74,5 +74,10 @@ namespace clinica_odontologica
 
             return this.findCount("SELECT count(id) FROM usuarios");
         }
+
+        public DataTable getUsuariosBySearch(string campos, string busca)
+        {
+            return this.find("SELECT " + ((campos == "") ? "*" : campos) + " FROM usuarios WHERE nome like '%" + busca + "%'");
+        }
     }
 }
