@@ -55,7 +55,7 @@ namespace clinica_odontologica
             {
                 lbl_est_pacientes.Text = "Nenhum Paciente cadastrado até o momento.";
             }
-            
+
 
             //PRONTUARIOS
             int numProntuarios = 0;
@@ -96,10 +96,10 @@ namespace clinica_odontologica
             //USUARIOS--------------------------------------------------------------------------------
             campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
             DataTable rsUsuarios = objUsuarios.getUsuarios(campos, "");
-            dgv_usuarios.DataSource = rsUsuarios;
+            dgv_usuario.DataSource = rsUsuarios;
 
             int numUsuarios = objUsuarios.getQuantUsuarios();
-            lbl_usuarios_total.Text = "Total " + numUsuarios;
+            lbl_usuario_total.Text = "Total " + numUsuarios;
 
             //----------------------------------------------------------------------------------------
 
@@ -186,9 +186,9 @@ namespace clinica_odontologica
             dgv_pacientes.DataSource = rsBuscaPacientes;
         }
 
-        private void dgv_usuarios_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgv_usuario_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int id = int.Parse(dgv_usuarios.CurrentRow.Cells["indice"].Value.ToString());
+            int id = int.Parse(dgv_usuario.CurrentRow.Cells["indice"].Value.ToString());
             FormUsuario form = new FormUsuario(id);
             form.Show();
         }

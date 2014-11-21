@@ -48,10 +48,20 @@ namespace clinica_odontologica
                 this.chave[2] = "username";
                 this.valor[2] = tb_usuario_username.Text;
                 this.chave[3] = "password";
-                this.valor[3] = tb_usuario_password.GetHashCode().ToString();
+                if (tb_usuario_password.Text == "")
+                {
+                    this.campos = "password";
+                    this.filtro = "WHERE id = " + this.id_usuario;
+                    DataTable rsPacientes = this.objUsuario.getUsuarios(this.campos, this.filtro);
+                    this.valor[3] = rsPacientes.Rows[0].ItemArray[0].ToString();
+                }
+                else 
+                {
+                    this.valor[3] = tb_usuario_password.Text.GetHashCode().ToString();
+                }
+                
 
                 this.objUsuario.updateUsuarios(this.filtro, this.chave, this.valor);
-
                 MessageBox.Show("Dados atualizados com sucesso!");
                 this.Close();
             }

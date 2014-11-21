@@ -30,3 +30,15 @@ C:\wamp\www\Fatec\odontology-system\clinica_odontologica\obj\Debug\clinica_odont
 C:\wamp\www\Fatec\odontology-system\clinica_odontologica\obj\Debug\clinica_odontologica.csproj.GenerateResource.Cache
 C:\wamp\www\Fatec\odontology-system\clinica_odontologica\obj\Debug\clinica_odontologica.FormUsuario.resources
 C:\wamp\www\Fatec\odontology-system\clinica_odontologica\obj\Debug\clinica_odontologica.FormPacientes.resources
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\bin\Debug\clinica_odontologica.exe.config
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.exe
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.pdb
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\bin\Debug\clinica_odontologica.exe
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\bin\Debug\clinica_odontologica.pdb
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.csprojResolveAssemblyReference.cache
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.Home.resources
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.FormPacientes.resources
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.FormUsuario.resources
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.Login.resources
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.Properties.Resources.resources
+C:\wamp\www\Fatec\ILP580\clinica_odontologica\obj\Debug\clinica_odontologica.csproj.GenerateResource.Cache
