@@ -37,7 +37,7 @@ namespace clinica_odontologica
         {
             if (this.id_usuario > 0)
             {
-                bt_usuario_excluir.Visible = true;
+                
 
                 //EDIT
                 this.valor = new string[4];
@@ -79,6 +79,7 @@ namespace clinica_odontologica
         {
             if (id_usuario > 0)
             {
+                bt_usuario_excluir.Visible = true;
                 this.preencheUsuario(id_usuario);
             }
         }
@@ -90,6 +91,18 @@ namespace clinica_odontologica
             tb_usuario_email.Text = rs.Rows[0].ItemArray[1].ToString();
             tb_usuario_username.Text = rs.Rows[0].ItemArray[2].ToString();
             bt_usuario_cadastrar.Text = "Editar";
+        }
+
+        private void bt_usuarios_fechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void bt_usuario_excluir_Click(object sender, EventArgs e)
+        {
+            this.objUsuario.deleteUsuarios(this.id_usuario);
+            MessageBox.Show("Registro excluido com sucesso!");
+            this.Close();
         }
     }
 }

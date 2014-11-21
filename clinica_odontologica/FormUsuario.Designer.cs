@@ -136,6 +136,7 @@
             this.bt_usuario_excluir.Text = "Excluir";
             this.bt_usuario_excluir.UseVisualStyleBackColor = true;
             this.bt_usuario_excluir.Visible = false;
+            this.bt_usuario_excluir.Click += new System.EventHandler(this.bt_usuario_excluir_Click);
             // 
             // bt_usuarios_fechar
             // 
@@ -146,6 +147,7 @@
             this.bt_usuarios_fechar.Size = new System.Drawing.Size(19, 20);
             this.bt_usuarios_fechar.TabIndex = 13;
             this.bt_usuarios_fechar.Text = "X";
+            this.bt_usuarios_fechar.Click += new System.EventHandler(this.bt_usuarios_fechar_Click);
             // 
             // pictureBox1
             // 
