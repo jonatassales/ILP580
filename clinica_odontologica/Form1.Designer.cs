@@ -252,6 +252,7 @@
             this.dgv_pacientes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgv_pacientes.Size = new System.Drawing.Size(849, 247);
             this.dgv_pacientes.TabIndex = 9;
+            this.dgv_pacientes.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgv_pacientes_RowHeaderMouseClick);
             // 
             // lbl_pacientes_total
             // 

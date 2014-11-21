@@ -23,8 +23,21 @@ namespace clinica_odontologica
             this.save(query);
         }
 
-        public void updatePacientes(int id) { 
-            
+        public void updatePacientes(string filtro, string[] chave, string[] valor)
+        {
+            string set_campos = "";
+            for (int i = 0; i < chave.Length; i++)
+            {
+                if (i == 0)
+                {
+                    set_campos = "" + chave[i] + " = '" + valor[i] + "'";
+                }
+                else
+                {
+                    set_campos += "," + chave[i] + " = '" + valor[i] + "'";
+                }
+            }
+            this.update("UPDATE clientes SET " + set_campos + " " + filtro);
         }
 
         public void deletePacientes(int id)
@@ -44,9 +57,9 @@ namespace clinica_odontologica
             return this.findCount("SELECT count(id) FROM clientes");
         }
 
-        public DataTable getPacietesById(int id)
+        public DataTable getPacietesById(string campos, int id)
         {
-            return this.find("SELECT * FROM clientes WHERE id = "+id);
+            return this.find("SELECT "+ ((campos == "") ? "*" : campos) +" FROM clientes WHERE id = "+id);
         }
 
         public DataTable getPacientesBySearch(string campos, string busca) 

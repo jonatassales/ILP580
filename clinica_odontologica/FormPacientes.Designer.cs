@@ -126,6 +126,7 @@
             this.bt_pacientes_excluir.Text = "Excluir";
             this.bt_pacientes_excluir.UseVisualStyleBackColor = true;
             this.bt_pacientes_excluir.Visible = false;
+            this.bt_pacientes_excluir.Click += new System.EventHandler(this.bt_pacientes_excluir_Click);
             // 
             // label8
             // 
@@ -206,6 +207,7 @@
             this.bt_pacientes_fechar.Size = new System.Drawing.Size(16, 16);
             this.bt_pacientes_fechar.TabIndex = 36;
             this.bt_pacientes_fechar.Text = "X";
+            this.bt_pacientes_fechar.Click += new System.EventHandler(this.bt_pacientes_fechar_Click);
             // 
             // pictureBox1
             // 
@@ -254,6 +256,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPacientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
