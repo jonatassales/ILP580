@@ -80,6 +80,8 @@ namespace clinica_odontologica
             {
                 bt_pacientes_excluir.Visible = true;
                 this.preenchePaciente(this.id_usuario);
+                pb_pacientes.Visible = true;
+                bt_pacientes_upload.Visible = true;
             }
         }
 

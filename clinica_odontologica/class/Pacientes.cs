@@ -19,7 +19,7 @@ namespace clinica_odontologica
             query  = "INSERT INTO clientes";
             query += "(nome, nascimento, cpf, cidade_id, estado_id, bairro, endereco, numero, cep, telefone, email, imagem)";
             query += "VALUES";
-            query += "('"+nome+"', '"+nascimento+"', '"+cpf+"', "+cidade_id+", "+estado_id+", '"+bairro+"', '"+endereco+"', "+numero+", '"+cep+"', '"+telefone+"', '"+email+"', '"+imagem+"')";
+            query += "('"+nome+"', '"+nascimento+"', '"+cpf+"', "+cidade_id+", "+estado_id+", '"+bairro+"', '"+endereco+"', "+numero+", '"+cep+"', '"+telefone+"', '"+email+"', 'img')";
             this.save(query);
         }
 

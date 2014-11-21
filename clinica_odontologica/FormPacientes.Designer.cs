@@ -240,6 +240,7 @@
             this.bt_pacientes_upload.TabIndex = 39;
             this.bt_pacientes_upload.Text = "upload";
             this.bt_pacientes_upload.UseVisualStyleBackColor = true;
+            this.bt_pacientes_upload.Visible = false;
             this.bt_pacientes_upload.Click += new System.EventHandler(this.bt_pacientes_upload_Click);
             // 
             // pb_pacientes
@@ -251,6 +252,7 @@
             this.pb_pacientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_pacientes.TabIndex = 40;
             this.pb_pacientes.TabStop = false;
+            this.pb_pacientes.Visible = false;
             // 
             // ofd_pacientes
             // 
