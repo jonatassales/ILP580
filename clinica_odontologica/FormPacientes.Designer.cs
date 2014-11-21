@@ -50,7 +50,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.bt_pacientes_upload = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.sfd_pacientes = new System.Windows.Forms.SaveFileDialog();
+            this.ofd_pacientes = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -251,9 +251,10 @@
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
             // 
-            // sfd_pacientes
+            // ofd_pacientes
             // 
-            this.sfd_pacientes.FileOk += new System.ComponentModel.CancelEventHandler(this.sfd_pacientes_FileOk);
+            this.ofd_pacientes.FileName = "openFileDialog1";
+            this.ofd_pacientes.FileOk += new System.ComponentModel.CancelEventHandler(this.ofd_pacientes_FileOk);
             // 
             // FormPacientes
             // 
@@ -316,6 +317,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button bt_pacientes_upload;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.SaveFileDialog sfd_pacientes;
+        private System.Windows.Forms.OpenFileDialog ofd_pacientes;
     }
 }

@@ -21,7 +21,7 @@ namespace clinica_odontologica
         public string filtro;
         public string[] chave;
         public string[] valor;
-        public string photo;
+        public string pacientes_file_path;
 
         public FormPacientes(int id = 0)
         {
@@ -105,15 +105,25 @@ namespace clinica_odontologica
             this.Close();
         }
 
-        private void sfd_pacientes_FileOk(object sender, CancelEventArgs e)
-        {
-            this.photo = sfd_pacientes.FileName;
-            MessageBox.Show("caminho -> "+this.photo);
-        }
-
         private void bt_pacientes_upload_Click(object sender, EventArgs e)
         {
-            sfd_pacientes.ShowDialog();
+            ofd_pacientes.ShowDialog();
+        }
+
+        private void ofd_pacientes_FileOk(object sender, CancelEventArgs e)
+        {
+            this.pacientes_file_path = ofd_pacientes.FileName;
+            string file_name = "file.jpg";
+            try
+            {
+                System.IO.File.Copy(this.pacientes_file_path, Program.img_path + ""+file_name);
+                this.objPacientes.saveImg(Program.img_path + "" + file_name, this.id_usuario);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+            
         }
 
     }

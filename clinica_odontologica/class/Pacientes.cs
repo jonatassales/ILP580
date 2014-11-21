@@ -66,5 +66,10 @@ namespace clinica_odontologica
         {
             return this.find("SELECT " + ((campos == "") ? "*" : campos) + " FROM clientes WHERE nome like '%" + busca + "%'");
         }
+
+        public void saveImg(string img_path, int id) 
+        {
+            this.update("UPDATE clientes SET imagem = '"+img_path+"' WHERE id = "+id); 
+        }
     }
 }
