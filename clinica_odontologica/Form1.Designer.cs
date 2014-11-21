@@ -48,6 +48,7 @@
             this.lbl_pacientes_total = new System.Windows.Forms.Label();
             this.bt_pacientes_add = new System.Windows.Forms.PictureBox();
             this.pnl_usuarios = new System.Windows.Forms.Panel();
+            this.tb_usuario_busca = new System.Windows.Forms.TextBox();
             this.dgv_usuario = new System.Windows.Forms.DataGridView();
             this.lbl_usuario_total = new System.Windows.Forms.Label();
             this.bt_usuarios_add = new System.Windows.Forms.PictureBox();
@@ -67,7 +68,6 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tb_usuario_busca = new System.Windows.Forms.TextBox();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_home.SuspendLayout();
@@ -208,9 +208,9 @@
             this.pnl_home.BackColor = System.Drawing.Color.Transparent;
             this.pnl_home.Controls.Add(this.pictureBox1);
             this.pnl_home.Controls.Add(this.gb_home);
-            this.pnl_home.Location = new System.Drawing.Point(731, 280);
+            this.pnl_home.Location = new System.Drawing.Point(0, 206);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(51, 38);
+            this.pnl_home.Size = new System.Drawing.Size(890, 145);
             this.pnl_home.TabIndex = 4;
             // 
             // pnl_pacientes
@@ -220,9 +220,9 @@
             this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
             this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
             this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
-            this.pnl_pacientes.Location = new System.Drawing.Point(642, 244);
+            this.pnl_pacientes.Location = new System.Drawing.Point(0, 70);
             this.pnl_pacientes.Name = "pnl_pacientes";
-            this.pnl_pacientes.Size = new System.Drawing.Size(83, 45);
+            this.pnl_pacientes.Size = new System.Drawing.Size(890, 70);
             this.pnl_pacientes.TabIndex = 8;
             this.pnl_pacientes.Visible = false;
             // 
@@ -281,11 +281,21 @@
             this.pnl_usuarios.Controls.Add(this.dgv_usuario);
             this.pnl_usuarios.Controls.Add(this.lbl_usuario_total);
             this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
-            this.pnl_usuarios.Location = new System.Drawing.Point(838, 312);
+            this.pnl_usuarios.Location = new System.Drawing.Point(0, 146);
             this.pnl_usuarios.Name = "pnl_usuarios";
-            this.pnl_usuarios.Size = new System.Drawing.Size(52, 54);
+            this.pnl_usuarios.Size = new System.Drawing.Size(890, 54);
             this.pnl_usuarios.TabIndex = 5;
             this.pnl_usuarios.Visible = false;
+            // 
+            // tb_usuario_busca
+            // 
+            this.tb_usuario_busca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_usuario_busca.Location = new System.Drawing.Point(659, 3);
+            this.tb_usuario_busca.Multiline = true;
+            this.tb_usuario_busca.Name = "tb_usuario_busca";
+            this.tb_usuario_busca.Size = new System.Drawing.Size(180, 28);
+            this.tb_usuario_busca.TabIndex = 12;
+            this.tb_usuario_busca.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_usuario_busca_KeyUp);
             // 
             // dgv_usuario
             // 
@@ -449,16 +459,6 @@
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // tb_usuario_busca
-            // 
-            this.tb_usuario_busca.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_usuario_busca.Location = new System.Drawing.Point(659, 3);
-            this.tb_usuario_busca.Multiline = true;
-            this.tb_usuario_busca.Name = "tb_usuario_busca";
-            this.tb_usuario_busca.Size = new System.Drawing.Size(180, 28);
-            this.tb_usuario_busca.TabIndex = 12;
-            this.tb_usuario_busca.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tb_usuario_busca_KeyUp);
             // 
             // Home
             // 

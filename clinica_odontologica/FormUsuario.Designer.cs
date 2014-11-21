@@ -41,6 +41,7 @@
             this.bt_usuario_excluir = new System.Windows.Forms.Button();
             this.bt_usuarios_fechar = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -158,12 +159,23 @@
             this.pictureBox1.TabIndex = 14;
             this.pictureBox1.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label2.Location = new System.Drawing.Point(169, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 46);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Usuarios";
+            // 
             // FormUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(511, 297);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bt_usuarios_fechar);
             this.Controls.Add(this.bt_usuario_excluir);
@@ -200,5 +212,6 @@
         private System.Windows.Forms.Button bt_usuario_excluir;
         private System.Windows.Forms.Label bt_usuarios_fechar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

@@ -93,7 +93,7 @@ namespace clinica_odontologica
 
             int id_dentista = int.Parse(Program.usuario_id);
 
-            //USUARIOS--------------------------------------------------------------------------------
+            //USUARIOS-GRID---------------------------------------------------------------------------
             campos = "id as 'Indice', nome as 'Nome', email as 'E-mail', tipo as 'Nivel', username as 'Login', created as 'Criado em' ";
             DataTable rsUsuarios = objUsuarios.getUsuarios(campos, "");
             dgv_usuario.DataSource = rsUsuarios;
@@ -103,7 +103,7 @@ namespace clinica_odontologica
 
             //----------------------------------------------------------------------------------------
 
-            //PACIENTES-------------------------------------------------------------------------------
+            //PACIENTES-GRID--------------------------------------------------------------------------
             campos = "nome as 'Nome', email as 'E-mail', nascimento as 'Data de Nascimento', telefone as 'Telefone'";
             DataTable rsPacientes = objPacientes.getPacientes(campos, "");
             dgv_pacientes.DataSource = rsPacientes;
