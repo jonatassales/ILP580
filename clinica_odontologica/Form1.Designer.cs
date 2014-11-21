@@ -70,7 +70,6 @@
             this.tb_usuario_busca = new System.Windows.Forms.TextBox();
             this.gb_home.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.rodape.SuspendLayout();
             this.pnl_home.SuspendLayout();
             this.pnl_pacientes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_pacientes)).BeginInit();
@@ -84,10 +83,10 @@
             // lbl_bem_vindo
             // 
             this.lbl_bem_vindo.AutoSize = true;
-            this.lbl_bem_vindo.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_bem_vindo.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_bem_vindo.Location = new System.Drawing.Point(18, 43);
             this.lbl_bem_vindo.Name = "lbl_bem_vindo";
-            this.lbl_bem_vindo.Size = new System.Drawing.Size(149, 18);
+            this.lbl_bem_vindo.Size = new System.Drawing.Size(195, 24);
             this.lbl_bem_vindo.TabIndex = 2;
             this.lbl_bem_vindo.Text = "Bem-vindo Dr. Fulano";
             // 
@@ -111,7 +110,7 @@
             // bt_grid_prontuarios
             // 
             this.bt_grid_prontuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_grid_prontuarios.BackgroundImage")));
-            this.bt_grid_prontuarios.Location = new System.Drawing.Point(22, 125);
+            this.bt_grid_prontuarios.Location = new System.Drawing.Point(38, 97);
             this.bt_grid_prontuarios.Name = "bt_grid_prontuarios";
             this.bt_grid_prontuarios.Size = new System.Drawing.Size(32, 35);
             this.bt_grid_prontuarios.TabIndex = 10;
@@ -120,7 +119,7 @@
             // bt_grid_tratamentos
             // 
             this.bt_grid_tratamentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_grid_tratamentos.BackgroundImage")));
-            this.bt_grid_tratamentos.Location = new System.Drawing.Point(22, 179);
+            this.bt_grid_tratamentos.Location = new System.Drawing.Point(38, 151);
             this.bt_grid_tratamentos.Name = "bt_grid_tratamentos";
             this.bt_grid_tratamentos.Size = new System.Drawing.Size(32, 35);
             this.bt_grid_tratamentos.TabIndex = 9;
@@ -129,7 +128,7 @@
             // bt_parcelas
             // 
             this.bt_parcelas.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_parcelas.BackgroundImage")));
-            this.bt_parcelas.Location = new System.Drawing.Point(22, 233);
+            this.bt_parcelas.Location = new System.Drawing.Point(38, 205);
             this.bt_parcelas.Name = "bt_parcelas";
             this.bt_parcelas.Size = new System.Drawing.Size(32, 35);
             this.bt_parcelas.TabIndex = 8;
@@ -138,7 +137,7 @@
             // bt_grid_pacientes
             // 
             this.bt_grid_pacientes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_grid_pacientes.BackgroundImage")));
-            this.bt_grid_pacientes.Location = new System.Drawing.Point(22, 68);
+            this.bt_grid_pacientes.Location = new System.Drawing.Point(38, 40);
             this.bt_grid_pacientes.Name = "bt_grid_pacientes";
             this.bt_grid_pacientes.Size = new System.Drawing.Size(32, 35);
             this.bt_grid_pacientes.TabIndex = 7;
@@ -148,40 +147,40 @@
             // lbl_est_parcelas
             // 
             this.lbl_est_parcelas.AutoSize = true;
-            this.lbl_est_parcelas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_est_parcelas.Location = new System.Drawing.Point(73, 242);
+            this.lbl_est_parcelas.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_est_parcelas.Location = new System.Drawing.Point(89, 214);
             this.lbl_est_parcelas.Name = "lbl_est_parcelas";
-            this.lbl_est_parcelas.Size = new System.Drawing.Size(156, 16);
+            this.lbl_est_parcelas.Size = new System.Drawing.Size(159, 20);
             this.lbl_est_parcelas.TabIndex = 6;
             this.lbl_est_parcelas.Text = "5 Parcelas atrasadas";
             // 
             // lbl_est_prontuarios
             // 
             this.lbl_est_prontuarios.AutoSize = true;
-            this.lbl_est_prontuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_est_prontuarios.Location = new System.Drawing.Point(70, 134);
+            this.lbl_est_prontuarios.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_est_prontuarios.Location = new System.Drawing.Point(86, 106);
             this.lbl_est_prontuarios.Name = "lbl_est_prontuarios";
-            this.lbl_est_prontuarios.Size = new System.Drawing.Size(181, 16);
+            this.lbl_est_prontuarios.Size = new System.Drawing.Size(196, 20);
             this.lbl_est_prontuarios.TabIndex = 5;
             this.lbl_est_prontuarios.Text = "15 Prontuarios em aberto\r\n";
             // 
             // lbl_est_tratamentos
             // 
             this.lbl_est_tratamentos.AutoSize = true;
-            this.lbl_est_tratamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_est_tratamentos.Location = new System.Drawing.Point(70, 188);
+            this.lbl_est_tratamentos.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_est_tratamentos.Location = new System.Drawing.Point(86, 160);
             this.lbl_est_tratamentos.Name = "lbl_est_tratamentos";
-            this.lbl_est_tratamentos.Size = new System.Drawing.Size(277, 16);
+            this.lbl_est_tratamentos.Size = new System.Drawing.Size(305, 20);
             this.lbl_est_tratamentos.TabIndex = 4;
             this.lbl_est_tratamentos.Text = "10 Tratamentos criados até o momento";
             // 
             // lbl_est_pacientes
             // 
             this.lbl_est_pacientes.AutoSize = true;
-            this.lbl_est_pacientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_est_pacientes.Location = new System.Drawing.Point(70, 75);
+            this.lbl_est_pacientes.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lbl_est_pacientes.Location = new System.Drawing.Point(86, 47);
             this.lbl_est_pacientes.Name = "lbl_est_pacientes";
-            this.lbl_est_pacientes.Size = new System.Drawing.Size(294, 16);
+            this.lbl_est_pacientes.Size = new System.Drawing.Size(319, 20);
             this.lbl_est_pacientes.TabIndex = 3;
             this.lbl_est_pacientes.Text = "23 Pacientes cadastrados até o momento";
             // 
@@ -199,7 +198,6 @@
             // 
             this.rodape.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.rodape.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("rodape.BackgroundImage")));
-            this.rodape.Controls.Add(this.pnl_home);
             this.rodape.Location = new System.Drawing.Point(0, 363);
             this.rodape.Name = "rodape";
             this.rodape.Size = new System.Drawing.Size(890, 77);
@@ -210,9 +208,9 @@
             this.pnl_home.BackColor = System.Drawing.Color.Transparent;
             this.pnl_home.Controls.Add(this.pictureBox1);
             this.pnl_home.Controls.Add(this.gb_home);
-            this.pnl_home.Location = new System.Drawing.Point(441, 29);
+            this.pnl_home.Location = new System.Drawing.Point(795, 268);
             this.pnl_home.Name = "pnl_home";
-            this.pnl_home.Size = new System.Drawing.Size(32, 36);
+            this.pnl_home.Size = new System.Drawing.Size(95, 97);
             this.pnl_home.TabIndex = 4;
             // 
             // pnl_pacientes
@@ -222,9 +220,9 @@
             this.pnl_pacientes.Controls.Add(this.dgv_pacientes);
             this.pnl_pacientes.Controls.Add(this.lbl_pacientes_total);
             this.pnl_pacientes.Controls.Add(this.bt_pacientes_add);
-            this.pnl_pacientes.Location = new System.Drawing.Point(15, 85);
+            this.pnl_pacientes.Location = new System.Drawing.Point(653, 190);
             this.pnl_pacientes.Name = "pnl_pacientes";
-            this.pnl_pacientes.Size = new System.Drawing.Size(863, 72);
+            this.pnl_pacientes.Size = new System.Drawing.Size(83, 45);
             this.pnl_pacientes.TabIndex = 8;
             this.pnl_pacientes.Visible = false;
             // 
@@ -258,10 +256,10 @@
             // lbl_pacientes_total
             // 
             this.lbl_pacientes_total.AutoSize = true;
-            this.lbl_pacientes_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_pacientes_total.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_pacientes_total.Location = new System.Drawing.Point(18, 15);
             this.lbl_pacientes_total.Name = "lbl_pacientes_total";
-            this.lbl_pacientes_total.Size = new System.Drawing.Size(57, 16);
+            this.lbl_pacientes_total.Size = new System.Drawing.Size(55, 19);
             this.lbl_pacientes_total.TabIndex = 7;
             this.lbl_pacientes_total.Text = "Total 0";
             // 
@@ -283,9 +281,9 @@
             this.pnl_usuarios.Controls.Add(this.dgv_usuario);
             this.pnl_usuarios.Controls.Add(this.lbl_usuario_total);
             this.pnl_usuarios.Controls.Add(this.bt_usuarios_add);
-            this.pnl_usuarios.Location = new System.Drawing.Point(15, 163);
+            this.pnl_usuarios.Location = new System.Drawing.Point(549, 254);
             this.pnl_usuarios.Name = "pnl_usuarios";
-            this.pnl_usuarios.Size = new System.Drawing.Size(871, 120);
+            this.pnl_usuarios.Size = new System.Drawing.Size(75, 44);
             this.pnl_usuarios.TabIndex = 5;
             this.pnl_usuarios.Visible = false;
             // 
@@ -310,10 +308,10 @@
             // lbl_usuario_total
             // 
             this.lbl_usuario_total.AutoSize = true;
-            this.lbl_usuario_total.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario_total.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_usuario_total.Location = new System.Drawing.Point(19, 13);
             this.lbl_usuario_total.Name = "lbl_usuario_total";
-            this.lbl_usuario_total.Size = new System.Drawing.Size(57, 16);
+            this.lbl_usuario_total.Size = new System.Drawing.Size(59, 20);
             this.lbl_usuario_total.TabIndex = 10;
             this.lbl_usuario_total.Text = "Total 0";
             // 
@@ -472,6 +470,7 @@
             this.Controls.Add(this.pnl_pacientes);
             this.Controls.Add(this.rodape);
             this.Controls.Add(this.menu);
+            this.Controls.Add(this.pnl_home);
             this.Controls.Add(this.lbl_bem_vindo);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -482,7 +481,6 @@
             this.gb_home.ResumeLayout(false);
             this.gb_home.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.rodape.ResumeLayout(false);
             this.pnl_home.ResumeLayout(false);
             this.pnl_pacientes.ResumeLayout(false);
             this.pnl_pacientes.PerformLayout();
